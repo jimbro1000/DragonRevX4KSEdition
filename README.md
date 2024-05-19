@@ -116,8 +116,65 @@ for the CPU and VDG. The two devices operate
 on opposite phases of the same clock.
 
 In order to retain a viable video signal
-the VDG clock must operate at the default
-0.89MHz frequency. Doubling the 
+the VDG timing must operate at the default
+0.89MHz frequency (VCLK is double that
+speed at 1.8MHz). Doubling the CPU clock 
+would result in the video signal being
+disrupted as it tries to run at double the
+usual rate. Note that the VDG does not need
+to see the E signal, instead it relies on
+the RAS0 signal to capture valid data over a
+74LS273 to buffer and stabilise the bus.
+
+To maintain a viable video signal the video
+clock needs to kept at the original rate, so
+the E signal witnessed by the VDG needs to
+be 0.89MHz and VCLK needs to be 1.8MHz. With
+a custom SAM this is not too large a task
+given the specific clock multipliers can be
+customised.
+
+The SAM in turn needs to capture the DA0
+signal from the VDG to trigger the next
+graphic data read.
+
+Typically the VDG timing is nearly
+interleaved with the CPU timing on a 1:1
+basis. This is managed through synchronisation
+of the VCLK and DA0.
+
+If the CPU speed is doubled the interleaving
+needs to be 2:1, and at quadruple speed it
+would be 4:1.
+
+Normally the VDG is exposed to data from
+both parts of the timing phase but given
+we don't need to send CPU data to the
+VDG, the LS273 can be set to only expose
+graphic data. The RAS0 signal used to
+trigger a load on the LS273 is artificial
+in nature given the memory is SRAM so no
+RAS/CAS multiplexing is technically required.
+In this context the RAS0 signal needs to
+isolated from the "regular" RAS0 and then
+timed to only fire at the original
+0.89MHz.
+
+The alternative to this is to use a block
+of dual port memory that allows the VDG
+to operate on a completely different
+clock cycle to the CPU, severing the need
+for the CPU to operate at a multiple of
+the VDG speed. In this mode of operation
+the SAM no longer needs to provide the
+VCLK signal or prepare the RAS0 signal
+and data. There are clear advantages to
+this approach but it does add other
+complexities and a 32k DPSRAM is not the
+cheapest option (although two 16k DPSRAM
+is likely to be *much* cheaper) or the
+smallest given the need for twice as
+many IO pins...
 
 ## Contributing ##
 
@@ -127,3 +184,8 @@ testing, once the design progresses that far.
 If you want to help please get in touch first 
 to keep the work flow consistent and to avoid
 potentially disasterous conflicts
+
+Currently the project needs review of the
+schematics prior to build, and a rewrite
+of the samX4 VHDL and GAL16V8 logic that
+drives the cartridge ports

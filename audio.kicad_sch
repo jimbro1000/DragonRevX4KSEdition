@@ -973,207 +973,6 @@
 				)
 			)
 		)
-		(symbol "Connector:Conn_01x03_Pin"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x03_Pin"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x03, script generated"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_01x03_Pin_1_1"
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 0.8636 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 2.54) (xy 0.8636 2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 0.8636 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Connector_Generic:Conn_01x24"
 			(pin_names
 				(offset 1.016) hide)
@@ -2230,22 +2029,23 @@
 				)
 			)
 		)
-		(symbol "Jumper:Jumper_3_Open"
+		(symbol "Jumper:Jumper_2_Small_Bridged"
+			(pin_numbers hide)
 			(pin_names
 				(offset 0) hide)
-			(exclude_from_sim no)
+			(exclude_from_sim yes)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "JP"
-				(at -2.54 -2.54 0)
+				(at 0 2.032 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Jumper_3_Open"
-				(at 0 2.794 0)
+			(property "Value" "Jumper_2_Small_Bridged"
+				(at 0 -2.286 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2270,7 +2070,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Jumper, 3-pole, both open"
+			(property "Description" "Jumper, 2-pole, small symbol, bridged"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2279,7 +2079,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Jumper SPDT"
+			(property "ki_keywords" "Jumper SPST"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2288,7 +2088,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Jumper* TestPoint*3Pads* TestPoint*Bridge*"
+			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2297,10 +2097,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "Jumper_3_Open_0_0"
+			(symbol "Jumper_2_Small_Bridged_0_0"
 				(circle
-					(center -3.302 0)
-					(radius 0.508)
+					(center -1.016 0)
+					(radius 0.254)
 					(stroke
 						(width 0)
 						(type default)
@@ -2310,19 +2110,8 @@
 					)
 				)
 				(circle
-					(center 0 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 3.302 0)
-					(radius 0.508)
+					(center 1.016 0)
+					(radius 0.254)
 					(stroke
 						(width 0)
 						(type default)
@@ -2332,35 +2121,11 @@
 					)
 				)
 			)
-			(symbol "Jumper_3_Open_0_1"
+			(symbol "Jumper_2_Small_Bridged_0_1"
 				(arc
-					(start -0.254 1.016)
-					(mid -1.651 1.4992)
-					(end -3.048 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.508) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 3.048 1.016)
-					(mid 1.651 1.4992)
-					(end 0.254 1.016)
+					(start 0.762 0.254)
+					(mid 0 0.5696)
+					(end -0.762 0.254)
 					(stroke
 						(width 0)
 						(type default)
@@ -2370,10 +2135,10 @@
 					)
 				)
 			)
-			(symbol "Jumper_3_Open_1_1"
+			(symbol "Jumper_2_Small_Bridged_1_1"
 				(pin passive line
-					(at -6.35 0 0)
-					(length 2.54)
+					(at -2.54 0 0)
+					(length 1.27)
 					(name "A"
 						(effects
 							(font
@@ -2390,26 +2155,8 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 6.35 0 180)
-					(length 2.54)
+					(at 2.54 0 180)
+					(length 1.27)
 					(name "B"
 						(effects
 							(font
@@ -2417,7 +2164,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3114,16 +2861,6 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 67.056) (xy 116.84 67.056)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d88d14c-0ad1-48ca-ac3b-51a808962fc3")
-	)
-	(wire
-		(pts
 			(xy 232.156 93.218) (xy 243.586 93.218)
 		)
 		(stroke
@@ -3371,16 +3108,6 @@
 			(type default)
 		)
 		(uuid "c7b1befa-7777-4b81-90da-edc647f16c1b")
-	)
-	(wire
-		(pts
-			(xy 166.878 67.056) (xy 179.578 67.056)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c81bddff-357d-4763-acb1-b2c7469aa0b2")
 	)
 	(wire
 		(pts
@@ -3790,28 +3517,6 @@
 			)
 		)
 	)
-	(global_label "OUT_R"
-		(shape output)
-		(at 160.528 70.866 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "305b247f-8f48-41ac-b439-ce7e6abfc11a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 160.528 79.0632 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "OUT_L"
 		(shape output)
 		(at 131.572 35.306 0)
@@ -3946,7 +3651,7 @@
 	)
 	(global_label "OUT_L"
 		(shape output)
-		(at 115.57 67.056 180)
+		(at 120.65 67.31 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3956,7 +3661,7 @@
 		)
 		(uuid "6e4f3182-9cab-489d-a56e-875de4ae5467")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 107.6147 67.056 0)
+			(at 112.6947 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4023,28 +3728,6 @@
 		(uuid "839c95d6-84f2-4b20-b89e-0d9660c033b1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 43.2186 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SOUND"
-		(shape output)
-		(at 154.178 67.056 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "914e48c3-643e-4968-9cef-ad864f0dc350")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 145.376 67.056 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4166,7 +3849,7 @@
 	)
 	(global_label "SOUND"
 		(shape output)
-		(at 116.84 67.056 0)
+		(at 125.73 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4176,7 +3859,7 @@
 		)
 		(uuid "b3e81b6b-688a-4693-ab08-cf1672b5f147")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.642 67.056 0)
+			(at 134.532 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4221,28 +3904,6 @@
 		(uuid "b743c702-2455-4b62-af2f-a0c8d051135d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 101.9662 27.686 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SOUND"
-		(shape input)
-		(at 179.578 61.976 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "baef0e43-75f8-426b-8811-9965ba2e06d0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.776 61.976 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5370,77 +5031,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:Jumper_3_Open")
-		(at 160.528 67.056 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7b010838-baf9-4085-b420-0e0d10fb5268")
-		(property "Reference" "JP6"
-			(at 160.528 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Mono_Mix"
-			(at 160.528 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 160.528 67.056 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 160.528 67.056 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 160.528 67.056 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c83fda2a-4b8d-4d18-8ecf-d331df9708e1")
-		)
-		(pin "2"
-			(uuid "5e791c5a-fb48-43cb-a780-230cd44349b7")
-		)
-		(pin "3"
-			(uuid "5224ee36-364f-48b5-84f6-49ff13d2242c")
-		)
-		(instances
-			(project "DragonRevX4Plus"
-				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/2190e0ba-181e-4cdf-908e-1b8ed733b9d5"
-					(reference "JP6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 122.682 48.006 180)
 		(unit 1)
@@ -6193,35 +5783,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x03_Pin")
-		(at 184.658 64.516 180)
+		(lib_id "Jumper:Jumper_2_Small_Bridged")
+		(at 123.19 67.31 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c966d3c2-1b8a-4863-84c8-3c5dd4930e69")
-		(property "Reference" "J7"
-			(at 185.928 63.246 0)
+		(uuid "b94791ec-1298-47ba-a2fe-5eaee5eacca6")
+		(property "Reference" "JP6"
+			(at 123.19 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "Stereo"
-			(at 185.928 65.786 0)
+		(property "Value" "Jumper_2_Small_Bridged"
+			(at 123.19 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 184.658 64.516 0)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
+			(at 123.19 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6230,7 +5818,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 184.658 64.516 0)
+			(at 123.19 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6238,8 +5826,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 184.658 64.516 0)
+		(property "Description" "Jumper, 2-pole, small symbol, bridged"
+			(at 123.19 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6248,18 +5836,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "0b725164-b77d-40d8-9973-1a3301f24f05")
+			(uuid "44e8bb56-a0d4-4ac8-aac4-c4a7173be9ec")
 		)
 		(pin "2"
-			(uuid "0be62746-1193-4b74-b8c4-24e02d6b19ce")
-		)
-		(pin "3"
-			(uuid "ea351275-61c5-44e1-83ad-1dd8d3575d18")
+			(uuid "b779acb9-046e-4e84-86bd-21a49535d0c3")
 		)
 		(instances
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/2190e0ba-181e-4cdf-908e-1b8ed733b9d5"
-					(reference "J7")
+					(reference "JP6")
 					(unit 1)
 				)
 			)
@@ -6565,73 +6150,6 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/2190e0ba-181e-4cdf-908e-1b8ed733b9d5"
 					(reference "#PWR0161")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 179.578 64.516 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d9496f53-153a-4038-b503-183915555452")
-		(property "Reference" "#PWR0159"
-			(at 173.228 64.516 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 175.768 64.516 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 179.578 64.516 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 179.578 64.516 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 179.578 64.516 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fde8c969-99ea-4381-9dae-fcb55d109584")
-		)
-		(instances
-			(project "DragonRevX4Plus"
-				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/2190e0ba-181e-4cdf-908e-1b8ed733b9d5"
-					(reference "#PWR0159")
 					(unit 1)
 				)
 			)
