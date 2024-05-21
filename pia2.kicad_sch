@@ -8486,7 +8486,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Dragon:DIN-5_DELTRON_671-0501_45deg_Horizontal"
+		(property "Footprint" "CoCoDragonMultiPak:KMDGX-5S-N"
 			(at 207.645 82.931 0)
 			(effects
 				(font

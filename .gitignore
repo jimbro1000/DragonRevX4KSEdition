@@ -1,3 +1,5 @@
 /*backups
 /gerbers
 /production
+*.bak
+*.lck

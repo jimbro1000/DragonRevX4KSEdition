@@ -1,4 +1,4 @@
-23356540482817961
+23361689379853436
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -6425,6 +6425,27 @@ EdgeConnector
 0
 40
 40
+CoCoDragonMultiPak
+KMDGX-5S-N
+
+
+0
+6
+6
+CoCoDragonMultiPak
+KMDGX-6S-6S-S4N
+
+
+0
+12
+12
+CoCoDragonMultiPak
+KMDGX-9S-N
+
+
+0
+10
+10
 CoCoDragonMultiPak
 Power_BarrelJack
 
