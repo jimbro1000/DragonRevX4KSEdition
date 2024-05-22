@@ -42,12 +42,18 @@ is on the right of the board.
 
 The board itself should (just) fit inside a 
 regular Dragon case but the power and video 
-interface needs to be external.
+interface needs to be external. The mounting 
+points are all wrong but it should fit.
 
-Without a constraint to fit in a pre-defined 
-case there is no real need to retain the 
-original case but some form of case will be 
-required. I leave this to someone else for now
+The design is intended to fit within an ATX
+case and conforms to the smallest ATX standard
+so almost any ATX case should suffice with a
+single caveat - the cartridge ports may
+overlap the space given over to the power supply,
+especially on older designs. A modern case 
+design that places the power supply away from 
+the board (typically the bottom of the case)
+should have no problems.
 
 The keyboard connector is compatible with the
 original Dragon design but also includes an 
