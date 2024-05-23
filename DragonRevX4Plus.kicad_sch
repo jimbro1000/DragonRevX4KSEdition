@@ -5391,28 +5391,6 @@
 			)
 		)
 	)
-	(global_label "SOUNDL"
-		(shape input)
-		(at 78.74 58.42 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2e3a0c8c-08b2-4ec3-95c6-8ce65bd2ad23")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.2243 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Alpha"
 		(shape input)
 		(at 31.75 121.92 180)
@@ -5536,6 +5514,28 @@
 		(uuid "4e3e7869-7848-4673-8d88-5abc27966ab6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 140.4156 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VID OUT"
+		(shape input)
+		(at 78.74 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "54a6d729-3804-4c23-ab40-10e37d982c30")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 89.2848 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5787,9 +5787,9 @@
 			)
 		)
 	)
-	(global_label "VID OUT"
+	(global_label "SOUNDL"
 		(shape input)
-		(at 78.74 60.96 0)
+		(at 78.74 58.42 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5797,9 +5797,9 @@
 			)
 			(justify left)
 		)
-		(uuid "a0f8d41b-0af5-4f46-b7ef-ef8075d06b5c")
+		(uuid "a6afe93f-c2c9-4f22-bb55-d97a2c44999e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.2848 60.96 0)
+			(at 89.2243 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5866,28 +5866,6 @@
 		(uuid "b8f94e17-7731-4f94-9f6f-f5576724fa61")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 69.0252 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SOUNDR"
-		(shape input)
-		(at 78.74 55.88 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b96ea9c8-7f2f-4d74-a09b-f690c28e319f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.4662 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6025,6 +6003,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SOUNDR"
+		(shape input)
+		(at 78.74 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ef7010c6-7fb0-4087-8877-ddd87b34ea57")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 89.4662 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -7240,73 +7240,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 78.74 63.5 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a35122ae-6afa-4890-9509-b9b94a8a16da")
-		(property "Reference" "#PWR099"
-			(at 85.09 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 82.55 64.135 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 78.74 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7e98315a-8bcc-4369-a825-74d627d9566d")
-		)
-		(instances
-			(project "DragonRevX4Plus"
-				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2"
-					(reference "#PWR099")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 201.93 36.83 270)
 		(unit 1)
@@ -8314,6 +8247,73 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2"
 					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 78.74 55.88 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f6d54bfe-a054-4cea-8d64-c7a690762c5a")
+		(property "Reference" "#PWR082"
+			(at 85.09 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 82.55 56.515 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 78.74 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9637452-9c33-4d34-939f-e12bedb4dc32")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2"
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)
