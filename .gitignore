@@ -3,3 +3,4 @@
 /production
 *.bak
 *.lck
+*auto_saved_files*
