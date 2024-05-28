@@ -195,3 +195,229 @@ Currently the project needs review of the
 schematics prior to build, and a rewrite
 of the samX4 VHDL and GAL16V8 logic that
 drives the cartridge ports
+
+## Design Notes ##
+
+Fundamentally this board is a combination of
+the revised Dragon 32 board (based on revX4)
+and a Dragon specific version of the 4-slot
+MPI design commonly used on Color Computers.
+
+Barring the physical constraints of the 
+original Dragon 32/64 case, all requirements
+remain to maintain compatibility with 
+existing software and hardware.
+
+### Video Subsystem ###
+
+As with the rev3 and revX4 boards the video
+subsystem is removed from the main design
+and all components moved to a daughterboard.
+On the rev3 and revX4 boards this is a 
+mezzanine board, here it is moved to an edge
+connected board. It should be possible to
+retain the same video boards with a simple
+adapter. The video subsystem is restricted
+to slot 1 due to the additional signals
+required from PIA 1 (U11) for control of
+graphic modes
+
+### SAM ###
+
+Instead of using the increasingly rare 
+MC6883 SAM chip this board relies on a CPLD
+to simulate the SAM chip. With no requirement
+to support 4KB, 16KB, 32KB or 64KB, or DRAM
+refresh a notable chunk of the functionality
+is no longer needed. What remains is CPU and
+video timing (see above), and memory 
+multiplexing and routing.
+
+The CPU/Video timing is expanded to permit
+fast operation without losing video coherence.
+The memory multiplexing is extended to 
+include memory paging and banking with the
+intent of achieving 2K or 4K page sizes
+with support for two independent tasks.
+
+The current scheme is limited to only 1MB of
+paged RAM.
+
+There is one additional requirement (as standard)
+and that is to convert VDG read pulses into
+a full address request. This needs the SAM
+to maintain a video base address, to count
+VDG read pulses (on rising and falling edge),
+to repeat a "row" of data (reseting the 
+video read address on HS), how many times a
+row is repeated and to control how
+many bytes are required for a single video
+row (or more accurately how many bits of the
+video address should be set to 0 on HS - this
+will need improving in order to permit a 40
+byte row instead of 32 or 16 bytes).
+
+The original SAM registers are built out of
+flip-flops mapped to a pair of addresses, one
+for set, one for reset. Any write strobe of 
+that address activating the latch as required.
+
+The samX4 does not need to operate in this
+manner but does so for compatibility.
+
+The default address map for the SAM control 
+bits is based at $FFC0
+
+| Dec   | Hex  | Purpose |
+| ----- | ---- | ------- |
+| 65472 | FFC0 | Clear V0 |
+| 65473 | FFC1 | Set V0 |
+| 65474 | FFC2 | Clear V1 |
+| 65475 | FFC3 | Set V1 |
+| 65476 | FFC4 | Clear V2 |
+| 65477 | FFC5 | Set V2 |
+| 65478 | FFC6 | Clear D0 |
+| 65479 | FFC7 | Set D0 |
+| 65480 | FFC8 | Clear D1 |
+| 65481 | FFC8 | Set D1 |
+| 65482 | FFCA | Clear D2 |
+| 65483 | FFCB | Set D2 |
+| 65484 | FFCC | Clear D3 |
+| 65485 | FFCD | Set D3 |
+| 65486 | FFCE | Clear D4 |
+| 65487 | FFCF | Set D4 |
+| 65488 | FFD0 | Clear D5 |
+| 65489 | FFD1 | Set D5 |
+| 65490 | FFD2 | Clear D6 |
+| 65491 | FFD3 | Set D6 |
+| 65492 | FFD4 | Clear P1 |
+| 65493 | FFD5 | Set P1 |
+| 65494 | FFD6 | Clear R0 |
+| 65495 | FFD7 | Set R0 |
+| 65496 | FFD8 | Clear R1 |
+| 65497 | FFD9 | Set R1 |
+| 65498 | FFDA | Clear M0 |
+| 65499 | FFDB | Set M0 |
+| 65500 | FFDC | Clear M1 |
+| 65501 | FFDD | Set M1 |
+| 65502 | FFDE | Clear TY |
+| 65503 | FFDF | Set TY |
+
+V0-2 is the Video Address Mode and controls
+how many rows are repeated and how many bits
+are cleared on HS.
+
+D0-6 is the Video Base Address offset by 512.
+
+P1 is the default page mode and when set
+maps the upper 32k of RAM to the lower 32k
+(only useful in RAM/ROM mode).
+
+R0-1 controls the CPU speed. The original
+behaviour is relatively complex but for
+the purposes of this design.
+
+M0-1 changes the memory size (RAM), only
+the value %11 (3) is valid here since the
+smaller and dynamic memory sizes are
+irrelevant and are all values are treated
+the same.
+
+TY changes the multiplexing mode between
+RAM/ROM (upper 32K reserved for ROMS) and
+all RAM. By default the system needs to boot
+as RAM/ROM then copy the ROM into RAM (using
+P1) to then switch to all RAM, or to only do
+so on demand (as per Dragon 64).
+
+With the samX4 it should be possible (slightly
+dangerous) to accept a full byte value on a
+write instead of requiring multiple writes to
+set the full value. So a write of xxxxx101 to
+$FFC0 would set all three bits.
+
+The upper bits should behave as per normal.
+The danger is that the data written to the bus
+will be "garbage" since there was no prior
+requirement so an additional pair of addresses
+will be needed to control whether the fast
+write is acceptable behaviour.
+
+Proposed/Changed Registers:
+
+| Dec   | Hex  | Purpose |
+| ----- | ---- | ------- |
+| 65472 | FFC0 | Clear V0-3 |
+| 65473 | FFC1 | Set V0-3 to bus value |
+| 65478 | FFC7 | Clear D0-7 |
+| 65479 | FFC8 | Set D0-7 to bus value |
+| 65494 | FFD6 | Clear R0-1 |
+| 65495 | FFD7 | Set R0-1 to bus value |
+
+__Note__:  
+V register is expanded to 4 bits to cover 
+wider rows.  
+D register is expanded to 8 bits to naturally
+extend the base address outside of the default
+64K address space without the need for custom
+rules for video in the paging scheme.  
+The clear operations are largely redundant in
+the revised scheme since the same can be
+achieved by writing 0 to the _set_ address.
+
+The behaviour of R is modified so that 0 is
+the default 0.89MHz operation, 1 is the "safe"
+address dependent fast mode, 2 is double
+speed of 1.88MHz (requires a MC68B09 or HD6309), 
+and 3 is quad speed of 3.57MHz (only possible 
+with a HD63C09 CPU).
+
+### Memory Subsystem ###
+
+As with the video the system RAM is moved to
+an independent board that abstracts operation
+off the main board so that the three buses
+behave as per the original Dragon Data design.
+
+For paging there are two commonly "reserved"
+memory spaces for this use - $FF90-$FF91 and
+$FFA0-$FFAF. A total of 18 bytes. This space
+conflicts with "The Dragon's Claw" cartridge
+although that can be managed with jumpers on 
+to move the address of the cartridge to $FFB0.
+
+It should be safe to expand the available
+address mapping to $FF80-$FFAF providing 48
+bytes of address space.
+
+#### Address Bus ####
+
+The address bus is expanded to a potential 24
+bit width - enough to support a 16MB address
+space (4MB on board and 3 expansion blocks).
+
+The SAM is responsible (as always) for routing
+16bit requests to the 24bit address space.
+
+#### Data Bus Arbitration ####
+
+The original design requires that the CPU
+data bus be isolated from video data reads.
+Likewise the video subsystem should only be
+exposed to data reads. The original specification
+allowed CPU and video reads to be exposed to
+the VDG but for fast operation this is refined
+to only allow video reads to hit the VDG and
+for that data to be maintained for a full
+VDG read cycle, which may be 1, 2 or 4 times
+the length of a CPU clock cycle depending on
+CPU clock speed.
+
+Other than the VDG all other data driven
+components on the board are permanently
+connected to the data and address buses.
+
+It is the responsibility of the memory board
+to provide data on both data buses and
+control when the data is exposed on read
+operations.
