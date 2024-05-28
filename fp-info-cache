@@ -1,4 +1,4 @@
-23361689379853436
+23347781720270635
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -23862,34 +23862,6 @@ PCIe
 0
 164
 164
-Connector_PCBEdge
-JAE_MM60-EZH039-Bx_BUS_PCI_Express_Holder
-PCI Express mini card latch for 3.9mm connector height, https://www.jae.com/direct/topics/topics_file_download/?topics_id=68909&ext_no=06&index=0&_lang=en&v=2022071912512930114109
-MiniPCI
-0
-6
-1
-Connector_PCBEdge
-JAE_MM60-EZH059-Bx_BUS_PCI_Express_Holder
-PCI Express mini card latch for 5.9mm connector height, https://www.jae.com/direct/topics/topics_file_download/topics_id=68910&ext_no=06&index=0&_lang=en&v=
-MiniPCI
-0
-6
-1
-Connector_PCBEdge
-SODIMM-200_1.8V_Card_edge
-SODIMM 200-pins edge connector, Jedec MO-224 Variation AB compliant (1.8V DDR2 SDRAM), 0.6mm pitch, https://www.jst-mfg.com/product/pdf/eng/eDM-200P.pdf
-sodimm
-0
-200
-200
-Connector_PCBEdge
-SODIMM-200_2.5V_Card_edge
-SODIMM 200-pins edge connector, Jedec MO-224 Variation AA compliant (2.5V DDR SDRAM), 0.6mm pitch, https://www.jst-mfg.com/product/pdf/eng/eDM-200P.pdf
-sodimm
-0
-200
-200
 Connector_PCBEdge
 Samtec_MECF-05-0_-L-DV_2x05_P1.27mm_Polarized_Edge
 Highspeed card edge connector for PCB's with 05 contacts (polarized)
@@ -55873,6 +55845,13 @@ Edge Connector 2x20 2.54mm pitch, 5.08mm row pitch
 0
 42
 41
+Dragon
+ISA_2x31
+Edge Connector 2x20 2.54mm pitch, 5.08mm row pitch
+
+0
+64
+63
 Dragon
 Jumper_4
 

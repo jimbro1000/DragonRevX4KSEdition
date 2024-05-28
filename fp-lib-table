@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "Dragon")(type "KiCad")(uri "${KIPRJMOD}/Dragon.pretty")(options "")(descr ""))
   (lib (name "CoCoDragonMultiPak")(type "KiCad")(uri "${KIPRJMOD}/CoCoDragonMultiPak.pretty")(options "")(descr ""))
+  (lib (name "Connector_PCBEdge")(type "KiCad")(uri "${KIPRJMOD}/Connector_PCBEdge.pretty")(options "")(descr ""))
 )
