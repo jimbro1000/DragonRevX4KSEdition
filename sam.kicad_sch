@@ -14646,6 +14646,127 @@
 		)
 	)
 	(symbol
+		(lib_id "74xx:74LS02")
+		(at 377.19 214.63 0)
+		(unit 5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aa2fdba3-8095-422d-97ce-090b2beb743d")
+		(property "Reference" "IC4"
+			(at 377.19 219.837 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74ACT02"
+			(at 377.19 222.377 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 377.19 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74ls02"
+			(at 377.19 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 377.19 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "MC74ACT02DR2GOSCT-ND"
+			(at 377.19 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SA2120" "Sheet 1 (spare)"
+			(at 377.19 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6f0fcceb-264c-46c2-9a74-ff8abbf473b6")
+		)
+		(pin "2"
+			(uuid "202ad62b-6f2d-4652-b6e5-951787093370")
+		)
+		(pin "3"
+			(uuid "140e8091-0d35-4c85-a3fe-bae27a98f0b5")
+		)
+		(pin "4"
+			(uuid "afe9ffab-4af1-40e9-84b6-03c4cdaf2dfe")
+		)
+		(pin "5"
+			(uuid "63fab94d-8958-4f8c-a03f-d4c646c3da88")
+		)
+		(pin "6"
+			(uuid "22acd20a-557b-4b53-a7ec-59e7ee6fa426")
+		)
+		(pin "10"
+			(uuid "ba776301-ab85-4738-9ed0-25502e7ce02e")
+		)
+		(pin "8"
+			(uuid "ea433343-b492-4e00-bd64-69970b2f5320")
+		)
+		(pin "9"
+			(uuid "ad6d8dfa-df06-4b5a-9dec-3ce496529016")
+		)
+		(pin "11"
+			(uuid "fdfc9610-d25c-477c-8ef2-3082d6e2674c")
+		)
+		(pin "12"
+			(uuid "a73e6e81-a9d0-4bcb-89c5-de35f4ef0c4d")
+		)
+		(pin "13"
+			(uuid "342493e3-c842-4e14-9249-b2e32fa3df0a")
+		)
+		(pin "14"
+			(uuid "ef784adf-6825-4828-aa69-833bab15c9f4")
+		)
+		(pin "7"
+			(uuid "bf7d05d4-05bb-43e4-9130-23a28e7eb693")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "IC4")
+					(unit 5)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 259.08 113.03 0)
 		(unit 1)
@@ -15353,6 +15474,72 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "IC5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 377.19 201.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c67fa9b9-0507-48c5-bbe3-5a7ab2fe97fa")
+		(property "Reference" "#PWR024"
+			(at 377.19 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 377.19 196.977 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 377.19 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 377.19 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 377.19 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6a94a4dd-6814-47e2-9e7e-96d94da7bb95")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -16457,6 +16644,72 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 377.19 227.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eaaa4f24-4a7f-437f-a30e-506d1d2d9a9c")
+		(property "Reference" "#PWR025"
+			(at 377.19 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 377.19 232.537 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 377.19 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 377.19 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 377.19 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f07b0fd-30a7-4401-becf-21175b39500f")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)

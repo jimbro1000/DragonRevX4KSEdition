@@ -16,8 +16,9 @@ and absolutely unproven
 The board differs from standard with the
 following features:
 
-* 256k SRAM - 64k address space, 32k pages
-(lower and upper ram space)
+* 1MB SRAM - 64k address space, 32k pages
+(lower and upper ram space) - theoretical 16MB
+limit
 * Multiple (selectable) cartridge slots
 * 2 button joystick ports (compatible with
 original single button joysticks)
@@ -28,6 +29,8 @@ original single button joysticks)
 * Advanced, addressable 6847 compatible VDG
 (one of different video output options)
 * Fast CPU options (1.8 or 3.6 MHz)
+* ISA style connection slots for further
+expansion (paged 4MB assigned to each)
 
 ## Board Layout ##
 
