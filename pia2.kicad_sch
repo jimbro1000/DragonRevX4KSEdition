@@ -4896,6 +4896,12 @@
 		(uuid "13ca3835-041a-4255-b3c1-546fbb7d368f")
 	)
 	(junction
+		(at 49.911 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1a4086da-be98-4e4f-a406-13e04b788c12")
+	)
+	(junction
 		(at 196.342 47.498)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4992,12 +4998,6 @@
 		(uuid "c83153ce-04ce-47f3-9a64-ca6d2fbadf0c")
 	)
 	(junction
-		(at 49.911 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ce41ce80-8d43-4468-8890-fa840b70b03c")
-	)
-	(junction
 		(at 171.704 44.958)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5038,6 +5038,10 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fbb57cdd-4431-4ea9-bb85-9311059bc48d")
+	)
+	(no_connect
+		(at 80.391 77.47)
+		(uuid "b36a5a12-4da5-4a65-a2ec-1118430b8266")
 	)
 	(no_connect
 		(at 231.394 47.5983)
@@ -6865,28 +6869,6 @@
 			)
 		)
 	)
-	(global_label "MEM-SIZE"
-		(shape output)
-		(at 80.391 77.47 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7ba9b5ed-d752-4d85-8c0d-4169f5073031")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 92.4396 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "6bit D{slash}A"
 		(shape output)
 		(at 102.108 167.64 180)
@@ -6993,28 +6975,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "~{FIRQ}"
-		(shape input)
-		(at 49.53 66.04 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8f62cdeb-644d-46f3-bee5-7f81d3918061")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.912 65.9606 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -7428,6 +7388,28 @@
 		(uuid "f05c10f2-4a31-4697-afca-57945b638960")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 43.5349 60.8806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "~{FIRQx}"
+		(shape input)
+		(at 49.53 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f1c17704-7e67-468a-b3f0-063944afeac5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 41.2228 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
