@@ -39,13 +39,13 @@ left hand side of the board although the
 serial port is a more commonly accepted DE9
 configuration instead of the 7-pin DIN
 
-The rear of the board is dedicated to the 
+The rear of the board is dedicated to the
 cartridge slots. The power and video output
 is on the right of the board.
 
-The board itself should (just) fit inside a 
-regular Dragon case but the power and video 
-interface needs to be external. The mounting 
+The board itself should (just) fit inside a
+regular Dragon case but the power and video
+interface needs to be external. The mounting
 points are all wrong but it should fit.
 
 The design is intended to fit within an ATX
@@ -53,39 +53,39 @@ case and conforms to the smallest ATX standard
 so almost any ATX case should suffice with a
 single caveat - the cartridge ports may
 overlap the space given over to the power supply,
-especially on older designs. A modern case 
-design that places the power supply away from 
+especially on older designs. A modern case
+design that places the power supply away from
 the board (typically the bottom of the case)
 should have no problems.
 
 The keyboard connector is compatible with the
-original Dragon design but also includes an 
-extra +5V which makes it very convenient to 
-fit an adapter for other styles of keyboard 
+original Dragon design but also includes an
+extra +5V which makes it very convenient to
+fit an adapter for other styles of keyboard
 using a microcontroller.
 
 ## Progress ##
 
 The design integrates most of the designs and
-upgrades I've developed for the Dragon, all 
-into a single board which helps to reduce the 
+upgrades I've developed for the Dragon, all
+into a single board which helps to reduce the
 footprint and power requirements
 
 At this point the task is to play around with
 the component layout to find a relatively simple
-and efficient approach. The board size, port 
-positions and component layout has not been 
-fixed. The only exception to this is the three 
+and efficient approach. The board size, port
+positions and component layout has not been
+fixed. The only exception to this is the three
 video connectors - these can be moved around the
-board but must retain the same relative 
+board but must retain the same relative
 positions
 
 ### Custom SamX4 Design ###
 
-The samX4 VHDL requires modifying to suit the 
+The samX4 VHDL requires modifying to suit the
 new design. Some features can be removed (like
 support for 4k and 16k memory models and DRAM
-refresh) and others points need adding 
+refresh) and others points need adding
 (corrected VDG read/clk timing and faster CPU
 multiplier).
 
@@ -109,7 +109,7 @@ responsibility of the cartridge port but
 the same disambiguation can easily be
 applied on a per-cartridge basis.
 
-The upper half of the expanded P1 device 
+The upper half of the expanded P1 device
 range is dedicated to the 256k banking
 scheme.
 
@@ -127,7 +127,7 @@ on opposite phases of the same clock.
 In order to retain a viable video signal
 the VDG timing must operate at the default
 0.89MHz frequency (VCLK is double that
-speed at 1.8MHz). Doubling the CPU clock 
+speed at 1.8MHz). Doubling the CPU clock
 would result in the video signal being
 disrupted as it tries to run at double the
 usual rate. Note that the VDG does not need
@@ -187,10 +187,10 @@ many IO pins...
 
 ## Contributing ##
 
-The project needs review and ultimately, 
+The project needs review and ultimately,
 testing, once the design progresses that far.
 
-If you want to help please get in touch first 
+If you want to help please get in touch first
 to keep the work flow consistent and to avoid
 potentially disasterous conflicts
 
@@ -206,9 +206,9 @@ the revised Dragon 32 board (based on revX4)
 and a Dragon specific version of the 4-slot
 MPI design commonly used on Color Computers.
 
-Barring the physical constraints of the 
+Barring the physical constraints of the
 original Dragon 32/64 case, all requirements
-remain to maintain compatibility with 
+remain to maintain compatibility with
 existing software and hardware.
 
 ### Video Subsystem ###
@@ -216,7 +216,7 @@ existing software and hardware.
 As with the rev3 and revX4 boards the video
 subsystem is removed from the main design
 and all components moved to a daughterboard.
-On the rev3 and revX4 boards this is a 
+On the rev3 and revX4 boards this is a
 mezzanine board, here it is moved to an edge
 connected board. It should be possible to
 retain the same video boards with a simple
@@ -227,18 +227,18 @@ graphic modes
 
 ### SAM ###
 
-Instead of using the increasingly rare 
+Instead of using the increasingly rare
 MC6883 SAM chip this board relies on a CPLD
 to simulate the SAM chip. With no requirement
 to support 4KB, 16KB, 32KB or 64KB, or DRAM
 refresh a notable chunk of the functionality
 is no longer needed. What remains is CPU and
-video timing (see above), and memory 
+video timing (see above), and memory
 multiplexing and routing.
 
 The CPU/Video timing is expanded to permit
 fast operation without losing video coherence.
-The memory multiplexing is extended to 
+The memory multiplexing is extended to
 include memory paging and banking with the
 intent of achieving 2K or 4K page sizes
 with support for two independent tasks.
@@ -251,7 +251,7 @@ and that is to convert VDG read pulses into
 a full address request. This needs the SAM
 to maintain a video base address, to count
 VDG read pulses (on rising and falling edge),
-to repeat a "row" of data (reseting the 
+to repeat a "row" of data (reseting the
 video read address on HS), how many times a
 row is repeated and to control how
 many bytes are required for a single video
@@ -262,13 +262,13 @@ byte row instead of 32 or 16 bytes).
 
 The original SAM registers are built out of
 flip-flops mapped to a pair of addresses, one
-for set, one for reset. Any write strobe of 
+for set, one for reset. Any write strobe of
 that address activating the latch as required.
 
 The samX4 does not need to operate in this
 manner but does so for compatibility.
 
-The default address map for the SAM control 
+The default address map for the SAM control
 bits is based at $FFC0
 
 | Dec   | Hex  | Purpose |
@@ -358,7 +358,7 @@ Proposed/Changed Registers:
 | 65495 | FFD7 | Set R0-1 to bus value |
 
 __Note__:  
-V register is expanded to 4 bits to cover 
+V register is expanded to 4 bits to cover
 wider rows.  
 D register is expanded to 8 bits to naturally
 extend the base address outside of the default
@@ -366,16 +366,16 @@ extend the base address outside of the default
 rules for video in the paging scheme.  
 The clear operations are largely redundant in
 the revised scheme since the same can be
-achieved by writing 0 to the _set_ address.
+achieved by writing 0 to the *set* address.
 
 The behaviour of R is modified so that 0 is
 the default 0.89MHz operation, 1 is the "safe"
 address dependent fast mode, 2 is double
-speed of 1.88MHz (requires a MC68B09 or HD6309), 
-and 3 is quad speed of 3.57MHz (only possible 
+speed of 1.88MHz (requires a MC68B09 or HD6309),
+and 3 is quad speed of 3.57MHz (only possible
 with a HD63C09 CPU).
 
-Revised V table
+__Revised V table__:
 | V0-3 | /X | /Y | Behaviour on HS | Notes |
 | ---- | -- | -- | --------------- | ----- |
 | 0000 | 1  | 12 | clear B1-4 | Alpha |
@@ -406,7 +406,7 @@ For paging there are two commonly "reserved"
 memory spaces for this use - $FF90-$FF91 and
 $FFA0-$FFAF. A total of 18 bytes. This space
 conflicts with "The Dragon's Claw" cartridge
-although that can be managed with jumpers on 
+although that can be managed with jumpers on
 to move the address of the cartridge to $FFB0.
 
 It should be safe to expand the available
