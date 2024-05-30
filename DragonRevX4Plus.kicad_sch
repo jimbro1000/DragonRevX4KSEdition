@@ -3654,20 +3654,12 @@
 		(uuid "24c32c2e-3542-4a3f-962d-50493a3fa694")
 	)
 	(no_connect
-		(at 316.23 170.18)
-		(uuid "33f8ece9-25a7-4da9-b428-d18ce430e1f7")
-	)
-	(no_connect
 		(at 374.65 38.1)
 		(uuid "4215f4a7-208a-4a0a-ae13-b4473e9e50dc")
 	)
 	(no_connect
 		(at 373.38 187.96)
 		(uuid "47b7bd05-76f7-4313-8489-871b1829a484")
-	)
-	(no_connect
-		(at 374.65 71.12)
-		(uuid "4bf39aed-e2d3-4925-a74e-49e870eecc29")
 	)
 	(no_connect
 		(at 196.85 44.45)
@@ -3728,10 +3720,6 @@
 	(no_connect
 		(at 360.68 154.94)
 		(uuid "b7e43f8f-5b40-4abc-b5f0-0218e3bc3b89")
-	)
-	(no_connect
-		(at 373.38 170.18)
-		(uuid "cfae693b-2616-47e0-b87d-77e482eb0b35")
 	)
 	(no_connect
 		(at 317.5 35.56)
@@ -7353,6 +7341,28 @@
 			)
 		)
 	)
+	(global_label "Q"
+		(shape input)
+		(at 373.38 170.18 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "78b164a5-de84-4d7b-a354-7e3be437ec71")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 377.6957 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Z2"
 		(shape input)
 		(at 361.95 66.04 180)
@@ -7991,6 +8001,28 @@
 			)
 		)
 	)
+	(global_label "Q"
+		(shape input)
+		(at 316.23 170.18 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ac566619-2ec9-438f-b597-df96f4f26a4a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 320.5457 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "VCLK"
 		(shape input)
 		(at 316.23 198.12 0)
@@ -8361,6 +8393,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Q"
+		(shape input)
+		(at 374.65 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cbbafccc-3aaf-4114-8720-f24637b42a13")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 378.9657 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
