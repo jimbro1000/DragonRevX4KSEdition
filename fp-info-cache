@@ -1,4 +1,4 @@
-23347781720270635
+23360337501892634
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -55804,6 +55804,13 @@ AY-QTHT
 24
 24
 Dragon
+BF
+
+
+0
+0
+0
+Dragon
 Button_AlpsAlpine_SPUN190900
 
 
@@ -55861,6 +55868,13 @@ Jumper_4
 4
 Dragon
 OJS HM 10A Relay
+
+
+0
+4
+4
+Dragon
+Omron G6L
 
 
 0
