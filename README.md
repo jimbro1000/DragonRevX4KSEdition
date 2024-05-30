@@ -375,6 +375,26 @@ speed of 1.88MHz (requires a MC68B09 or HD6309),
 and 3 is quad speed of 3.57MHz (only possible 
 with a HD63C09 CPU).
 
+Revised V table
+| V0-3 | /X | /Y | Behaviour on HS | Notes |
+| ---- | -- | -- | --------------- | ----- |
+| 0000 | 1  | 12 | clear B1-4 | Alpha |
+| 0001 | 3  | 1  | clear B1-3 | |
+| 0010 | 1  | 3  | clear B1-4 | |
+| 0011 | 2  | 1  | clear B1-3 | |
+| 0100 | 1  | 2  | clear B1-4 | |
+| 0101 | 1  | 1  | clear B1-3 | |
+| 0110 | 1  | 1  | clear B1-4 | |
+| 0111 | 1  | 1  | none (DMA) | |
+| 1000 | 1  | 12 | B - 40 | Wide Alpha |
+| 1001 | 1  | 8  | clear B1-4 | Short Alpha |
+| 1010 | 1  | 8  | B - 40 | Wide Short Alpha |
+| 1011 | 1  | 1  | B - 40 | |
+| 1100 | 1  | 1  | clear B1-5 | |
+| 1101 | 1  | 1  | B - 64 | 16-bit data |
+| 1110 | 1  | 1  | B - 80 | Wide 16-bit data |
+| 1111 | 1  | 1  | none (DMA) | |
+
 ### Memory Subsystem ###
 
 As with the video the system RAM is moved to
