@@ -75,6 +75,9 @@ NET D<5> LOC = P93;
 NET D<6> LOC = P95;
 NET D<7> LOC = P96;
 
+## need to identify 4 more IO pins for a DO(7..0) bus
+## for data output not just input
+
 NET DA0 LOC = P22 | BUFG = CLK;
 NET OscOut LOC = P23 | BUFG = CLK;
 

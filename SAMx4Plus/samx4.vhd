@@ -142,8 +142,8 @@ architecture rtl of samx4 is
 
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 	-- -- Shortcuts
-
-	constant want_FF3x : boolean := want_256K or want_scroll;
+    -- needs a rethink, disable for now
+	-- constant want_FF3x : boolean := want_256K or want_scroll;
 
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 	-- -- Address decoding
@@ -195,6 +195,9 @@ architecture rtl of samx4 is
 	--  1  1  1  0  1   1   B - 80
 	--  1  1  1  1  1   1   None (DMA)
 	-- signal V : std_logic_vector(3 downto 0) := (others => '0');
+	-- can achieve B - 64 by resetting B1-B5
+	-- B - 40 and B - 80 are more complex and may be best represented
+	-- through DMA unless Y divider is more than 1
 
 	-- F: VDG address offset.  The usual range is 15 downto 9, specifying
 	-- offset in multiples of 512 bytes.  If want_scroll is enabled, more
@@ -256,24 +259,25 @@ architecture rtl of samx4 is
 
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 	-- -- Address multiplexer
+	-- not required - all dependent code needs to be removed
 
-	signal ram_size_16K : boolean;
-	signal ram_size_16K_1 : boolean;
-	signal ram_size_16K_4 : boolean;
-	signal ram_size_4K : boolean;
+	-- signal ram_size_16K : boolean;
+	-- signal ram_size_16K_1 : boolean;
+	-- signal ram_size_16K_4 : boolean;
+	-- signal ram_size_4K : boolean;
 
-	signal Z7_is_RAS1 : boolean;
+	-- signal Z7_is_RAS1 : boolean;
 
 	-- Latched from bit 12 or 14 of MPU or VDG address
-	signal RAS_bank : std_logic;
+	-- signal RAS_bank : std_logic;
 
 	type addr_type is (MPU, VDG);
 	signal z_source : addr_type := MPU;
-	type row_or_col is (ROW, COL);
-	signal z_mux : row_or_col;
+	-- type row_or_col is (ROW, COL);
+	-- signal z_mux : row_or_col;
 
 	signal nRAS : std_logic;
-	signal nRAS1 : std_logic;
+	-- signal nRAS1 : std_logic;
 
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 	-- -- Reset
@@ -328,6 +332,8 @@ architecture rtl of samx4 is
 	signal use_ygnd     : std_logic;
 	signal use_yb4      : std_logic;
 	signal use_ydiv12   : std_logic;
+	-- signal use_ydiv8    : std_logic;
+	-- needed for 8 row character sets
 	signal use_ydiv3    : std_logic;
 	signal use_ydiv2    : std_logic;
 	signal use_ydiv1    : std_logic;
@@ -343,20 +349,30 @@ begin
 	-- -- Address decoding
 
 	-- IO, SAM registers, IRQ vectors
+	-- SAM control bits and CPU vectors
 	is_FFxx <= A(15 downto 8) = "11111111";
+	-- IO bank 0 (P0)
 	is_IO0  <= is_FFxx and A(7 downto 5) = "000";      -- FF0x and FF1x
-	is_IO1  <= (is_FFxx and A(7 downto 4) = "0010" and want_FF3x) or   -- FF2x ONLY
-		   (is_FFxx and A(7 downto 5) = "001" and not want_FF3x);  -- FF2x and FF3x
-	assign_FF3x_g : if want_FF3x generate
-		is_FF3x <= is_FFxx and A(7 downto 4) = "0011";  -- FF3x ONLY
-	end generate;
+	-- IO bank 1 (P1)
+	-- want to move banking to FFA0 instead of FF3x
+	is_IO1  <= is_FFxx and A(7 downto 5) = "001";  -- FF2x and FF3x
+	-- assign_FF3x_g : if want_FF3x generate
+	-- 	is_FF3x <= is_FFxx and A(7 downto 4) = "0011";  -- FF3x ONLY
+	-- end generate;
+	-- IO bank 2 (cartidge port P2)
 	is_IO2     <= is_FFxx and A(7 downto 5) = "010";   -- FF4x and FF5x
+	is_FFAx    <= is_FFxx and A(7 downto 5) = "101";   -- FFAx and FFBx
 	is_SAM_REG <= is_FFxx and A(7 downto 5) = "110";   -- FFCx and FFDx
 	is_IRQ_VEC <= is_FFxx and A(7 downto 5) = "111";   -- FFEx and FFFx
 
 	-- Upper 32K
+	-- ROM 0
 	is_8xxx <= A(15 downto 13) = "100";
+	-- ROM 1
 	is_Axxx <= A(15 downto 13) = "101";
+	-- merged rom select
+	is_ROM  <= is_8xxx or is_Axxx;
+	-- ROM 2 (cartridge port)
 	is_Cxxx <= A(15 downto 14) = "11" and not is_FFxx;
 	is_upper_32K  <= is_8xxx or is_Axxx or is_Cxxx;
 
@@ -376,8 +392,9 @@ begin
 	       -- Upper 32K writes in map type 1 on the '785:
 	       "111" when want_785 and is_upper_32K and TY = '1' and RnW = '0' else
 	       -- Upper 32K in map type 0 AND writes in map type 1 on the '783:
-	       "001" when is_8xxx else
-	       "010" when is_Axxx else
+	       "001" when is_ROM else
+		   -- ROM1 is reserved for flashing rom
+	       -- "010" when is_Axxx else
 	       "011" when is_Cxxx else
 	       -- RAM, excluding writes in map type 1 on the '783:
 	       "000" when RnW = '1' else
@@ -392,22 +409,23 @@ begin
 
 	process (IER, E_i, RnW, is_FFxx, is_FF3x, is_SAM_REG)
 	begin
+		-- on reset low
 		if IER = '1' then
 			Vbuf2 <= (others => '0');
 			F <= (others => '0');
 			P <= '0';
 			R <= (others => '0');
-			if want_4K and want_16K then
-				M(0) <= '0';
-			end if;
-			if want_4K or want_16K then
-				M(1) <= '0';
-			end if;
+			-- if want_4K and want_16K then
+			-- 	M(0) <= '0';
+			-- end if;
+			-- if want_4K or want_16K then
+			-- 	M(1) <= '0';
+			-- end if;
 			TY <= '0';
-			if want_256K then
-				bank <= INIT_BANK;
-				vbank_mode <= '0';
-			end if;
+			-- if want_256K then
+			-- 	bank <= INIT_BANK;
+			-- 	vbank_mode <= '0';
+			-- end if;
 			if want_scroll then
 				Xoff <= (others => '0');
 			end if;
@@ -421,56 +439,56 @@ begin
 					when "0001" => Vbuf2(1) <= A(0);  -- ¹
 					when "0010" => Vbuf2(2) <= A(0);  -- ¹
 					when "0011" => F(9) <= A(0);
+					-- non compliance mode:
+					-- when "0011" =< F(16 downto 9) <= D(7 downto 0);
 					when "0100" => F(10) <= A(0);
 					when "0101" => F(11) <= A(0);
 					when "0110" => F(12) <= A(0);
 					when "0111" => F(13) <= A(0);
 					when "1000" => F(14) <= A(0);
 					when "1001" => F(15) <= A(0);
-					-- non compliance mode:
-					-- when "0011" => F(15 downto 9) <= D(6 downto 0);
 					when "1010" => P <= A(0);
 					when "1011" => R(0) <= A(0);
 					when "1100" => R(1) <= A(0);
-					when "1101" =>
-						if want_4K and want_16K then
-							M(0) <= A(0);
-						end if;
-					when "1110" =>
-						if want_4K or want_16K then
-							M(1) <= A(0);
-						end if;
+					-- when "1101" =>
+					-- 	if want_4K and want_16K then
+					-- 		M(0) <= A(0);
+					-- 	end if;
+					-- when "1110" =>
+					-- 	if want_4K or want_16K then
+					-- 		M(1) <= A(0);
+					-- 	end if;
 					when "1111" => TY <= A(0);
 					when others => null;
 				end case;
-			elsif is_FF3x and RnW = '0' then
-				-- 256K banker board registers
-				if want_256K then
-					if A(3 downto 2) = "00" then
-						bank(0) <= A(1 downto 0);
-					elsif A(3 downto 2) = "01" then
-						bank(1) <= A(1 downto 0);
-					elsif A(3 downto 1) = "100" then
-						vbank_mode <= A(0);
-					end if;
-				end if;
-				-- Scroll registers - non-standard, not enabled
-				-- by default
-				if want_scroll then
-					if A(3 downto 0) = "1010" then
-						-- Clear X offset
-						Xoff <= (others => '0');
-					elsif A(3 downto 0) = "1011" then
-						-- Clear video base (F)
-						F <= (others => '0');
-					elsif A(3 downto 1) = "110" then
-						-- Shift bit left into X offset
-						Xoff <= Xoff(3 downto 0) & A(0);
-					elsif A(3 downto 1) = "111" then
-						-- Shift bit left into video base (F)
-						F <= F(14 downto 5) & A(0);
-					end if;
-				end if;
+			-- elsif is_FF3x and RnW = '0' then
+			--	-- 256K banker board registers
+			--	if want_256K then
+			--		if A(3 downto 2) = "00" then
+			--			bank(0) <= A(1 downto 0);
+			--		elsif A(3 downto 2) = "01" then
+			--			bank(1) <= A(1 downto 0);
+			--		elsif A(3 downto 1) = "100" then
+			--			vbank_mode <= A(0);
+			--		end if;
+			--	end if;
+			--	-- Scroll registers - non-standard, not enabled
+			--	-- by default
+			--	if want_scroll then
+			--		if A(3 downto 0) = "1010" then
+			--			-- Clear X offset
+			--			Xoff <= (others => '0');
+			--		elsif A(3 downto 0) = "1011" then
+			--			-- Clear video base (F)
+			--			F <= (others => '0');
+			--		elsif A(3 downto 1) = "110" then
+			--			-- Shift bit left into X offset
+			--			Xoff <= Xoff(3 downto 0) & A(0);
+			--		elsif A(3 downto 1) = "111" then
+			--			-- Shift bit left into video base (F)
+			--			F <= F(14 downto 5) & A(0);
+			--		end if;
+			--	end if;
 			end if;
 		end if;
 	end process;
@@ -496,35 +514,39 @@ begin
 
 	-- Refresh timing: HS# going low enables a burst of 8 refresh cycles,
 	-- continuing for multiples of 8 if held low longer than that.
-
-	refresh_request_g : if want_refresh generate
-		process (nHS, IER, C(2))
-		begin
-			if nHS = '0' or IER = '1' then
-				refresh_request <= '1';
-			elsif falling_edge(C(2)) then
-				refresh_request <= '0';
-			end if;
-		end process;
-	end generate;
+	-- not required in sram only system
+	-- refresh_request_g : if want_refresh generate
+	--	process (nHS, IER, C(2))
+	--	begin
+	--		if nHS = '0' or IER = '1' then
+	--			refresh_request <= '1';
+	--		elsif falling_edge(C(2)) then
+	--			refresh_request <= '0';
+	--		end if;
+	--	end process;
+	-- end generate;
 
 	-- MPU rate signals
+	-- needs modifying for true double and quad speeds
 	mpu_rate_slow <= R = "00";
 	mpu_rate_ad_slow <= R = "01" and (is_RAM or is_IO0);
 	mpu_rate_ad_fast <= R = "01" and not (is_RAM or is_IO0);
 	mpu_rate_fast <= R(1) = '1';
 
 	-- ROW vs COLUMN
-	z_mux <= ROW when T = TF or T = T0 or T = T1 or
-		 T = T7 or T = T8 or T = T9 else COL;
+	-- z_mux <= ROW when T = TF or T = T0 or T = T1 or
+	--	 T = T7 or T = T8 or T = T9 else COL;
 
 	-- RAS# timing
+	-- needs changing to only trigger nRAS on VDG reads
+	-- for double speed needs to be every second VDG clock
+	-- for quad speed needs to be every fourth VDG clock
 	nRAS <= '0' when T = T1 or T = T2 or T = T3 or T = T4 or T = T5 or
 		T = T9 or T = TA or T = TB or T = TC or T = TD else '1';
 
 	-- CAS# timing
-	nCAS <= '0' when ((T = T3 or T = T4 or T = T5 or T = T6 or T = T7) and not refresh_cycle) or
-		(T = TB or T = TC or T = TD or T = TE or T = TF) else '1';
+	-- nCAS <= '0' when ((T = T3 or T = T4 or T = T5 or T = T6 or T = T7) and not refresh_cycle) or
+	--	(T = TB or T = TC or T = TD or T = TE or T = TF) else '1';
 
 	-- VDG DA0 transition window open for these states
 	vdg_da0_window <= true when T = TA or T = TB else false;
@@ -555,10 +577,10 @@ begin
 							Q_i <= '1';
 							if mpu_rate_fast and (not want_fast_video or is_RAM) then
 								-- MPU address to RAM
-								z_source <= MPU;
-								if want_refresh then
-									refresh_cycle <= false;
-								end if;
+								-- z_source <= MPU;
+								-- if want_refresh then
+								--	refresh_cycle <= false;
+								-- end if;
 							end if;
 						end if;
 					end if;
@@ -611,10 +633,10 @@ begin
 				when T6 =>
 					T <= T7;
 
-					if want_refresh and refresh_cycle then
-						-- increment refresh row
-						C <= std_logic_vector(unsigned(C)+1);
-					end if;
+					-- if want_refresh and refresh_cycle then
+					--	-- increment refresh row
+					--	C <= std_logic_vector(unsigned(C)+1);
+					-- end if;
 
 					if not fast_cycle then
 						-- E rise
@@ -626,10 +648,10 @@ begin
 					-- CAS# rises (see above)
 
 					-- MPU address to RAM (could have done this at T7)
-					z_source <= MPU;
-					if want_refresh then
-						refresh_cycle <= false;
-					end if;
+					-- z_source <= MPU;
+					-- if want_refresh then
+					--	refresh_cycle <= false;
+					-- end if;
 
 					if fast_cycle then
 						if mpu_rate_slow or mpu_rate_ad_slow then
@@ -753,16 +775,16 @@ begin
 
 	-- RAM size flags
 
-	ram_size_16K <= (want_16K and not want_4K and M(1) = '0') or  -- 4K not supported
-			(want_16K and want_4K and M = "01");  -- or 16K selected
+	-- ram_size_16K <= (want_16K and not want_4K and M(1) = '0') or  -- 4K not supported
+	--		(want_16K and want_4K and M = "01");  -- or 16K selected
 
-	ram_size_16K_4 <= ram_size_16K and want_785 and P = '1';
-	ram_size_16K_1 <= ram_size_16K and not ram_size_16K_4;
+	-- ram_size_16K_4 <= ram_size_16K and want_785 and P = '1';
+	-- ram_size_16K_1 <= ram_size_16K and not ram_size_16K_4;
 
-	ram_size_4K <= (want_4K and not want_16K and M(1) = '0') or  -- 16K not supported
-		       (want_4K and want_16K and M = "00");  -- or 4K selected
+	-- ram_size_4K <= (want_4K and not want_16K and M(1) = '0') or  -- 16K not supported
+	-- 	       (want_4K and want_16K and M = "00");  -- or 4K selected
 
-	Z7_is_RAS1 <= ram_size_4K or ram_size_16K_1;
+	-- Z7_is_RAS1 <= ram_size_4K or ram_size_16K_1;
 
 	-- Video address lowest 5 bits.  If the optional non-standard scroll
 	-- registers are enabled, they are added in here.
@@ -773,12 +795,12 @@ begin
 		std_logic_vector(unsigned(B(4 downto 1) & DA0) + unsigned(Xoff));
 
 	-- Which bank to strobe
-
-	RAS_bank <= A(12) when (ram_size_4K    and z_source = MPU) else
-		    B(12) when (ram_size_4K    and z_source = VDG) else
-		    A(14) when (ram_size_16K_1 and z_source = MPU) else
-		    B(14) when (ram_size_16K_1 and z_source = VDG) else
-		    '0';
+	-- not required for sram only system
+	-- RAS_bank <= A(12) when (ram_size_4K    and z_source = MPU) else
+	--	    B(12) when (ram_size_4K    and z_source = VDG) else
+	--	    A(14) when (ram_size_16K_1 and z_source = MPU) else
+	--	    B(14) when (ram_size_16K_1 and z_source = VDG) else
+	--	    '0';
 
 	-- RAS0# is strobed for refresh, in 64K mode, or for bank 0 in
 	-- 4K/16Kx1.
@@ -791,59 +813,67 @@ begin
 
 	nRAS0 <= nRAS when refresh_cycle or RAS_bank = '0' else '1';
 
-	assign_nRAS1_g : if want_4K or want_16K generate
-		nRAS1 <= nRAS when refresh_cycle or RAS_bank = '1' else '1';
-	end generate;
+	-- assign_nRAS1_g : if want_4K or want_16K generate
+	--	nRAS1 <= nRAS when refresh_cycle or RAS_bank = '1' else '1';
+	-- end generate;
 
 	-- Z8 is the most complicated, as it's either used to strobe A16 (ROW)
 	-- & A17 (COL) for 256K support or (optionally) repurposed as a speed
 	-- indicator LED.
 
-	Z(8) <= -- Repurposed as speed indicator:
-		'1' when not want_256K and fast_cycle and want_Z8_speed_LED else
-		-- Not used:
-		'0' when not want_256K else
-		'0' when refresh_cycle else
-		-- MPU ROW
-		bank(to_integer(unsigned'('0'&A(15))))(0) when z_source = MPU and z_mux = ROW else
-		-- MPU COL
-		bank(to_integer(unsigned'('0'&A(15))))(1) when z_source = MPU else
-		-- VDG ROW (use lower 32K bank selection)
-		bank(0)(0) when z_mux = ROW and vbank_mode = '0' else
-		-- VDG ROW (0)
-		'0'        when z_mux = ROW else
-		-- VDG COL (use lower 32K bank selection)
-		bank(0)(1) when vbank_mode = '0' else
-		-- VDG COL (0)
-		'0';
+	-- Z(8) <= -- Repurposed as speed indicator:
+	--	'1' when not want_256K and fast_cycle and want_Z8_speed_LED else
+	--	-- Not used:
+	--	'0' when not want_256K else
+	--	'0' when refresh_cycle else
+	--	-- MPU ROW
+	--	bank(to_integer(unsigned'('0'&A(15))))(0) when z_source = MPU and z_mux = ROW else
+	--	-- MPU COL
+	--	bank(to_integer(unsigned'('0'&A(15))))(1) when z_source = MPU else
+	--	-- VDG ROW (use lower 32K bank selection)
+	--	bank(0)(0) when z_mux = ROW and vbank_mode = '0' else
+	--	-- VDG ROW (0)
+	--	'0'        when z_mux = ROW else
+	--	-- VDG COL (use lower 32K bank selection)
+	--	bank(0)(1) when vbank_mode = '0' else
+	--	-- VDG COL (0)
+	--	'0';
 
 	-- Z7 is shared with RAS1# in 4K and 16K x 1 modes.
 
-	Z(7) <= nRAS1 when Z7_is_RAS1 else
-		C(7)  when refresh_cycle else
-		A(7)  when z_source = MPU and z_mux = ROW else  -- MPU ROW
-		P     when z_source = MPU and TY = '0' else     -- MPU COL, Map Type 0
-		A(15) when z_source = MPU else                  -- MPU COL, Map Type 1
-		B(7)  when z_mux = ROW else                     -- VDG ROW
-		B(15);                                          -- VDG COL
+	-- Z(7) <= nRAS1 when Z7_is_RAS1 else
+	--	C(7)  when refresh_cycle else
+	--	A(7)  when z_source = MPU and z_mux = ROW else  -- MPU ROW
+	--	P     when z_source = MPU and TY = '0' else     -- MPU COL, Map Type 0
+	--	A(15) when z_source = MPU else                  -- MPU COL, Map Type 1
+	--	B(7)  when z_mux = ROW else                     -- VDG ROW
+	--	B(15);                                          -- VDG COL
 
 	-- Z6..0 varies by ram size, but is otherwise pretty simple.
 
-	Z(6 downto 0) <=
-		C(6 downto 0)        when refresh_cycle else
-		A(6 downto 0)        when z_source = MPU and z_mux = ROW else   -- MPU ROW
-		'0' & A(11 downto 6) when z_source = MPU and ram_size_4K else   -- MPU COL 4K
-		A(13 downto 7)       when z_source = MPU and ram_size_16K else  -- MPU COL 16K
-		A(14 downto 8)       when z_source = MPU else                   -- MPU COL
-		-- VDG ROW, DMA mode
-		B(6 downto 1) & DA0  when z_mux = ROW and is_DMA else
-		-- VDG ROW, 16-byte modes
-		B(6 downto 4) & Btmp(3 downto 0) when z_mux = ROW and V(0) = '1' else
-		-- VDG ROW, 32-byte modes
-		B(6 downto 5) & Btmp(4 downto 0) when z_mux = ROW else
-		'0' & B(11 downto 6) when ram_size_4K else                      -- VDG COL 4K
-		B(13 downto 7)       when ram_size_16K else                     -- VDG COL 16K
-		B(14 downto 8);                                                 -- VDG COL
+	-- Z(6 downto 0) <=
+	--	C(6 downto 0)        when refresh_cycle else
+	--	A(6 downto 0)        when z_source = MPU and z_mux = ROW else   -- MPU ROW
+	--	'0' & A(11 downto 6) when z_source = MPU and ram_size_4K else   -- MPU COL 4K
+	--	A(13 downto 7)       when z_source = MPU and ram_size_16K else  -- MPU COL 16K
+	--	A(14 downto 8)       when z_source = MPU else                   -- MPU COL
+	--	-- VDG ROW, DMA mode
+	--	B(6 downto 1) & DA0  when z_mux = ROW and is_DMA else
+	--	-- VDG ROW, 16-byte modes
+	--	B(6 downto 4) & Btmp(3 downto 0) when z_mux = ROW and V(0) = '1' else
+	--	-- VDG ROW, 32-byte modes
+	--	B(6 downto 5) & Btmp(4 downto 0) when z_mux = ROW else
+	--	'0' & B(11 downto 6) when ram_size_4K else                      -- VDG COL 4K
+	--	B(13 downto 7)       when ram_size_16K else                     -- VDG COL 16K
+	--	B(14 downto 8);                                                 -- VDG COL
+
+	-- SRAM logic is much simpler!
+	-- Z(21 downto 16) is current unused
+	-- will need to handle ROM addressing too though once paging is incorporated
+	Z(21 downto 16) <= '0';
+	Z(15 downto 0) <=
+		A(15 downto 0) 		when z_source = MPU else
+		B(14 downto 4) & Btmp(3 downto 0);
 
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 	-- -- Reset
