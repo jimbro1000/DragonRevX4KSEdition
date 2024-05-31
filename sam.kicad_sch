@@ -3232,6 +3232,120 @@
 				)
 			)
 		)
+		(symbol "Connector:TestPoint_Flag"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 3.429 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_Flag"
+				(at 3.302 4.191 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point (alternative flag-style design)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_Flag_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.889 0.889)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0.889 2.794)
+					(end 5.842 0.889)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TestPoint_Flag_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector_Generic:Conn_01x06"
 			(pin_names
 				(offset 1.016) hide)
@@ -5656,6 +5770,12 @@
 		(uuid "55ef4351-17cb-4f19-9250-eb85b45ac7d5")
 	)
 	(junction
+		(at 284.48 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60ae9600-51a9-43e9-b2cc-133703c8d90e")
+	)
+	(junction
 		(at 58.42 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5666,6 +5786,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "657d5c82-af1f-49ed-95ab-7e9f40a63d00")
+	)
+	(junction
+		(at 35.56 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "68fd4c76-44d2-4106-932b-0cb99f994ed2")
 	)
 	(junction
 		(at 275.59 27.94)
@@ -5684,6 +5810,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "76a05c99-0290-4af5-8a9e-3e648a4ef9a8")
+	)
+	(junction
+		(at 267.97 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c8c0dba-a1f5-4904-94b5-63922f6ceef4")
 	)
 	(junction
 		(at 78.74 19.05)
@@ -5710,6 +5842,12 @@
 		(uuid "8d82268a-5880-414f-9bbb-324694c47ccb")
 	)
 	(junction
+		(at 236.22 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8f7712f1-620f-47e4-9cee-32ca0a379faa")
+	)
+	(junction
 		(at 237.49 20.32)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5728,6 +5866,12 @@
 		(uuid "9ef4bf75-ad35-44bf-849e-cc9d4c047ff4")
 	)
 	(junction
+		(at 287.02 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a0a7ba54-067a-4f90-8721-73e4e7638d77")
+	)
+	(junction
 		(at 228.6 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5738,6 +5882,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c048c515-5082-4e2e-aad7-2c3b58557cb9")
+	)
+	(junction
+		(at 284.48 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "caf2a942-2c0c-46a7-95b7-316d20ad3a40")
 	)
 	(junction
 		(at 224.79 27.94)
@@ -5764,10 +5914,22 @@
 		(uuid "e1716f02-707f-405b-b559-3524df60b5b7")
 	)
 	(junction
+		(at 36.83 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e96db97c-682c-4d20-ab1f-b9f1ef444a0b")
+	)
+	(junction
 		(at 85.09 161.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ea93f1f7-2b37-4c8b-b393-7ad0d3d4c1e3")
+	)
+	(junction
+		(at 36.83 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fe04220c-a8b1-422f-b283-fb12d3cf76b6")
 	)
 	(no_connect
 		(at 157.48 41.91)
@@ -6277,6 +6439,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 81.28) (xy 284.48 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bb3edd5-f1e6-47ee-96d2-b6e59202785f")
+	)
+	(wire
+		(pts
 			(xy 246.3605 128.2859) (xy 246.3605 132.08)
 		)
 		(stroke
@@ -6337,7 +6509,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 59.69) (xy 53.34 59.69)
+			(xy 35.56 59.69) (xy 36.83 59.69)
 		)
 		(stroke
 			(width 0)
@@ -6387,7 +6559,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.036 87.63) (xy 58.42 87.63)
+			(xy 34.036 87.63) (xy 35.56 87.63)
 		)
 		(stroke
 			(width 0)
@@ -6495,6 +6667,26 @@
 		)
 		(uuid "224f9aa9-2e52-49b4-af5c-85e83eb718cf")
 	)
+	(wire
+		(pts
+			(xy 36.83 60.96) (xy 36.83 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2470b853-eeba-4c29-809c-9dacbd4c9e23")
+	)
+	(wire
+		(pts
+			(xy 267.97 76.2) (xy 267.97 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26e941a0-00e0-43dc-a600-c78aa0ab91cd")
+	)
 	(bus
 		(pts
 			(xy 49.53 26.67) (xy 49.53 29.21)
@@ -6584,6 +6776,16 @@
 			(type default)
 		)
 		(uuid "2de0e9e0-1f61-4ba3-bcb6-79d732cbab33")
+	)
+	(wire
+		(pts
+			(xy 287.02 130.81) (xy 271.78 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "302953d7-bc57-4222-8fca-178371eeb898")
 	)
 	(wire
 		(pts
@@ -6677,7 +6879,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 54.61) (xy 58.42 54.61)
+			(xy 35.56 54.61) (xy 36.83 54.61)
 		)
 		(stroke
 			(width 0)
@@ -6727,6 +6929,26 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 93.98) (xy 228.6 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e4fd0cd-c75e-4e24-a1ed-d50c55650d7a")
+	)
+	(wire
+		(pts
+			(xy 284.48 80.01) (xy 284.48 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ed4e8d6-7778-43ff-8b8f-fa8f6d985e9b")
+	)
+	(wire
+		(pts
 			(xy 91.44 161.29) (xy 88.9 161.29)
 		)
 		(stroke
@@ -6754,6 +6976,16 @@
 			(type default)
 		)
 		(uuid "401e8e6c-c4a7-405f-b6a0-3bc6075707ae")
+	)
+	(wire
+		(pts
+			(xy 228.6 93.98) (xy 236.22 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40f0b323-e191-4513-afbf-2b027c494ffe")
 	)
 	(wire
 		(pts
@@ -6804,16 +7036,6 @@
 			(type default)
 		)
 		(uuid "4477b6d7-93c0-4365-9a46-85de8dadd377")
-	)
-	(wire
-		(pts
-			(xy 236.22 93.98) (xy 236.22 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "45093b1a-4876-4e53-a8e3-eedecf334826")
 	)
 	(wire
 		(pts
@@ -6917,6 +7139,16 @@
 	)
 	(wire
 		(pts
+			(xy 285.75 83.82) (xy 284.48 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e1c1476-5f17-45c5-92ce-b010519438f5")
+	)
+	(wire
+		(pts
 			(xy 121.92 39.37) (xy 118.11 39.37)
 		)
 		(stroke
@@ -7017,6 +7249,16 @@
 	)
 	(wire
 		(pts
+			(xy 36.83 53.34) (xy 36.83 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fdf9a9a-739a-4523-98c0-7a865712fe29")
+	)
+	(wire
+		(pts
 			(xy 52.07 80.01) (xy 58.42 80.01)
 		)
 		(stroke
@@ -7024,6 +7266,16 @@
 			(type default)
 		)
 		(uuid "6561b6c7-0dcf-47dd-92a5-d8327844340f")
+	)
+	(wire
+		(pts
+			(xy 35.56 81.28) (xy 35.56 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65ba0a68-938a-4647-88ba-35eb84e195b2")
 	)
 	(bus
 		(pts
@@ -7067,6 +7319,16 @@
 	)
 	(wire
 		(pts
+			(xy 288.29 130.81) (xy 287.02 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d29d60d-ccd7-4cce-97c9-ad92e6d555fb")
+	)
+	(wire
+		(pts
 			(xy 109.22 110.49) (xy 120.65 110.49)
 		)
 		(stroke
@@ -7074,6 +7336,16 @@
 			(type default)
 		)
 		(uuid "6dcc643f-1720-409c-8d38-29c858035268")
+	)
+	(wire
+		(pts
+			(xy 284.48 83.82) (xy 284.48 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73af25c3-8441-45d9-890b-bf828507c8d0")
 	)
 	(bus
 		(pts
@@ -7167,6 +7439,16 @@
 	)
 	(wire
 		(pts
+			(xy 269.24 78.74) (xy 267.97 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7de3196b-f5a7-402c-ab92-62d8b467a737")
+	)
+	(wire
+		(pts
 			(xy 109.22 62.23) (xy 118.11 62.23)
 		)
 		(stroke
@@ -7214,6 +7496,16 @@
 			(type default)
 		)
 		(uuid "80a41046-9581-442a-963e-187befc7ffa3")
+	)
+	(wire
+		(pts
+			(xy 35.56 87.63) (xy 58.42 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80c5060f-f800-469a-add1-4d0621ec3a9d")
 	)
 	(wire
 		(pts
@@ -7357,6 +7649,16 @@
 	)
 	(wire
 		(pts
+			(xy 287.02 129.54) (xy 287.02 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98279240-419a-4f45-bf4c-cc369a164e1c")
+	)
+	(wire
+		(pts
 			(xy 250.19 20.32) (xy 262.89 20.32)
 		)
 		(stroke
@@ -7364,6 +7666,16 @@
 			(type default)
 		)
 		(uuid "98494a3e-55ec-49de-8975-961750a3941b")
+	)
+	(wire
+		(pts
+			(xy 276.86 86.36) (xy 261.62 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9887430e-5132-46fa-bb84-ce5b4e8598ae")
 	)
 	(wire
 		(pts
@@ -7427,6 +7739,16 @@
 	)
 	(wire
 		(pts
+			(xy 276.86 86.36) (xy 276.86 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dc93279-c3c8-4cde-87a2-72210a24ce75")
+	)
+	(wire
+		(pts
 			(xy 40.64 110.49) (xy 58.42 110.49)
 		)
 		(stroke
@@ -7434,6 +7756,16 @@
 			(type default)
 		)
 		(uuid "9e06f3b1-15e3-4f3d-ad4f-cc81c77f9fd3")
+	)
+	(wire
+		(pts
+			(xy 36.83 54.61) (xy 58.42 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e3549a7-0740-459e-b8f6-46dae69526d6")
 	)
 	(wire
 		(pts
@@ -7534,6 +7866,16 @@
 			(type default)
 		)
 		(uuid "ac69af46-a8bd-47dc-beef-160bc7ca55ae")
+	)
+	(wire
+		(pts
+			(xy 236.22 93.98) (xy 236.22 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae592d7b-04a1-4686-ae21-a7ff6ea1942e")
 	)
 	(wire
 		(pts
@@ -7664,6 +8006,26 @@
 			(type default)
 		)
 		(uuid "bfc4529b-ac61-4add-9a2e-3def9dcd8cf3")
+	)
+	(wire
+		(pts
+			(xy 284.48 83.82) (xy 261.62 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0046906-cd11-4947-83ca-b371481f301f")
+	)
+	(wire
+		(pts
+			(xy 285.75 81.28) (xy 284.48 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2b02486-a69b-4b94-b875-cb3e9f98b614")
 	)
 	(wire
 		(pts
@@ -7917,6 +8279,16 @@
 	)
 	(wire
 		(pts
+			(xy 36.83 59.69) (xy 53.34 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df2a7b39-a672-44d2-a9fd-f0db31e4ede7")
+	)
+	(wire
+		(pts
 			(xy 237.49 20.32) (xy 250.19 20.32)
 		)
 		(stroke
@@ -7944,6 +8316,16 @@
 			(type default)
 		)
 		(uuid "e080df22-f264-4151-b27b-242da06014dc")
+	)
+	(wire
+		(pts
+			(xy 267.97 78.74) (xy 261.62 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1bed556-b304-4e3f-9e86-10fed5726b29")
 	)
 	(bus
 		(pts
@@ -8118,7 +8500,7 @@
 	(text_box "XC95144XL - end of life, currently still stocked\n\nInputs are 5V tolerant\nOutput is 3.3V, all downstream components must handle a 3V3 high TTL signal\n\nACT, FCT and HCT logic should be acceptable and compliant\n\n29C040 states Vil=0.8max, Vih=2.0min\nW65C21 states Vil=0.8max, Vih=2.0min\nW65C51 states Vil=0.8max, Vih=2.0min\nMC6809E and HD63C09 are proven compliant"
 		(exclude_from_sim no)
 		(at 43.434 171.958 0)
-		(size 84.074 19.812)
+		(size 84.074 24.13)
 		(stroke
 			(width 0)
 			(type default)
@@ -8807,7 +9189,7 @@
 	)
 	(global_label "P1b"
 		(shape input)
-		(at 261.62 81.28 0)
+		(at 285.75 81.28 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8817,7 +9199,7 @@
 		)
 		(uuid "07d951ba-841e-4f6b-8a91-a05d8b4d2234")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 267.5795 81.28 0)
+			(at 291.7095 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8939,7 +9321,7 @@
 	)
 	(global_label "VCLK"
 		(shape output)
-		(at 48.26 59.69 180)
+		(at 35.56 59.69 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8949,7 +9331,7 @@
 		)
 		(uuid "10f9da2b-07bc-4b5c-929b-293f26d80b93")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 41.2723 59.69 0)
+			(at 28.5723 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9049,7 +9431,7 @@
 	)
 	(global_label "P0"
 		(shape output)
-		(at 271.78 130.81 0)
+		(at 288.29 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9059,7 +9441,7 @@
 		)
 		(uuid "1ab6a791-41a3-494e-988b-5cb0b5072c58")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 276.5837 130.7306 0)
+			(at 293.0937 130.7306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9467,7 +9849,7 @@
 	)
 	(global_label "P1a"
 		(shape input)
-		(at 261.62 78.74 0)
+		(at 269.24 78.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9477,7 +9859,7 @@
 		)
 		(uuid "606a0c51-5dac-4573-872a-9b50dd541013")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 267.5795 78.74 0)
+			(at 275.1995 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9687,7 +10069,7 @@
 	)
 	(global_label "DA0"
 		(shape input)
-		(at 48.26 54.61 180)
+		(at 35.56 54.61 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9697,7 +10079,7 @@
 		)
 		(uuid "81981d72-55c5-43b3-aea2-ad0bfdb9a97e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.3609 54.61 0)
+			(at 29.6609 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10193,7 +10575,7 @@
 	)
 	(global_label "P1d"
 		(shape input)
-		(at 261.62 86.36 0)
+		(at 276.86 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10203,7 +10585,7 @@
 		)
 		(uuid "bcf11da9-fee6-4993-aae6-15b170b4b6d8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 267.5795 86.36 0)
+			(at 282.8195 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10325,7 +10707,7 @@
 	)
 	(global_label "P1"
 		(shape input)
-		(at 236.22 93.98 180)
+		(at 228.6 93.98 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10335,7 +10717,7 @@
 		)
 		(uuid "cff5aadf-ebfe-4552-bcd1-412a2cbf09b2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 231.4163 93.9006 0)
+			(at 223.7963 93.9006 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10479,7 +10861,7 @@
 	)
 	(global_label "P1c"
 		(shape input)
-		(at 261.62 83.82 0)
+		(at 285.75 83.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10489,7 +10871,7 @@
 		)
 		(uuid "e1d26ba9-4ca5-4894-ac3c-9995f452bc10")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 267.5191 83.82 0)
+			(at 291.6491 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11864,6 +12246,72 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Flag")
+		(at 287.02 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "23bff426-1694-44b5-96e1-d4086f780e08")
+		(property "Reference" "TP12"
+			(at 285.75 129.4131 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_PIA0"
+			(at 285.75 126.8731 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+			(at 292.1 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 292.1 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative flag-style design)"
+			(at 287.02 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "36b4493a-0867-4ac7-81b7-63a386b47702")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "TP12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Motorola PIA:R_Pack_Split")
 		(at 113.665 100.33 0)
 		(unit 8)
@@ -12270,6 +12718,72 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Flag")
+		(at 228.6 96.52 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3159493f-0819-4cef-8b2a-2e4f8848d8e0")
+		(property "Reference" "TP7"
+			(at 229.87 99.1871 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_P1"
+			(at 229.87 96.6471 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+			(at 223.52 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 223.52 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative flag-style design)"
+			(at 228.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e619d4a3-1581-4579-bc34-a45ae6b24b76")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -13118,6 +13632,72 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Flag")
+		(at 267.97 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4978430a-ff29-407b-8ca4-628f058cefd9")
+		(property "Reference" "TP8"
+			(at 266.7 73.5329 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_PIA1"
+			(at 266.7 76.0729 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+			(at 273.05 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 273.05 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative flag-style design)"
+			(at 267.97 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9af8c9b3-4f9b-4ec3-99df-0c8c9c7b8721")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xx:74LS02")
 		(at 237.871 138.43 0)
 		(unit 4)
@@ -13335,6 +13915,74 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "X1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Flag")
+		(at 36.83 53.34 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "67fc043b-32df-4b41-9a7f-6b8cbfc57021")
+		(property "Reference" "TP5"
+			(at 38.1 50.6729 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_DA0"
+			(at 38.1 53.2129 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+			(at 31.75 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 31.75 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative flag-style design)"
+			(at 36.83 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b440f9f4-0ef2-489b-b8a8-bdbf1a8e1856")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -14255,6 +14903,139 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "#PWR062")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Flag")
+		(at 284.48 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7dc95104-99f6-4250-9433-dab8ae7a6e31")
+		(property "Reference" "TP9"
+			(at 283.21 77.3429 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_VDG"
+			(at 283.21 79.8829 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+			(at 289.56 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 289.56 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative flag-style design)"
+			(at 284.48 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4db5f372-5dd9-4ce3-aab6-e0d3cac42e79")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Flag")
+		(at 284.48 85.09 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7f3c0f22-85dc-4fa7-bc86-6bf8e719c878")
+		(property "Reference" "TP10"
+			(at 295.91 86.868 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_AUD1"
+			(at 295.91 89.408 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+			(at 289.56 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 289.56 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative flag-style design)"
+			(at 284.48 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "deda0f68-aa9c-4009-b543-d517e6c23445")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -15944,6 +16725,72 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Flag")
+		(at 36.83 60.96 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c7675f48-c92e-4dfe-ad20-134441e1219c")
+		(property "Reference" "TP4"
+			(at 38.1 63.6271 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_VCLK"
+			(at 38.1 61.0871 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+			(at 31.75 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 31.75 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative flag-style design)"
+			(at 36.83 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c8a05439-29d2-4489-a6e1-4e66e061e92a")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 228.6 50.8 0)
 		(mirror y)
@@ -16598,6 +17445,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Flag")
+		(at 276.86 88.9 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dea27b24-7068-4bdc-a3be-9cfe8c359732")
+		(property "Reference" "TP11"
+			(at 288.036 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_AUD2"
+			(at 288.036 92.964 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+			(at 281.94 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative flag-style design)"
+			(at 276.86 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "21e2dcb4-135a-479c-b891-666b9c17ec64")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Jumper:Jumper_3_Bridged12")
 		(at 250.19 157.48 180)
 		(unit 1)
@@ -16729,6 +17643,74 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Flag")
+		(at 35.56 81.28 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e471ff6d-83d2-40c8-a41f-e243d0bae571")
+		(property "Reference" "TP6"
+			(at 36.83 78.6129 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_OSC"
+			(at 36.83 81.1529 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+			(at 30.48 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 30.48 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative flag-style design)"
+			(at 35.56 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2bb71952-cbf8-4528-9f35-c8180fc2f479")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "TP6")
 					(unit 1)
 				)
 			)
