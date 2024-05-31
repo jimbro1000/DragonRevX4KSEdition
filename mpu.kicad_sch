@@ -2708,16 +2708,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 120.65) (xy 156.21 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "296e0449-8343-4307-be39-f09feb5d9b39")
-	)
-	(wire
-		(pts
 			(xy 200.66 95.25) (xy 196.85 95.25)
 		)
 		(stroke
@@ -4754,17 +4744,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Flag")
-		(at 156.21 124.46 0)
-		(mirror y)
+		(at 156.21 120.65 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "7c5236fe-500c-472f-b094-e3775183d4a2")
 		(property "Reference" "TP1"
-			(at 157.48 121.7929 0)
+			(at 157.48 123.3171 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4773,7 +4761,7 @@
 			)
 		)
 		(property "Value" "TP_E"
-			(at 157.48 124.3329 0)
+			(at 157.48 120.7771 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4782,7 +4770,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
-			(at 151.13 124.46 0)
+			(at 151.13 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4791,7 +4779,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 151.13 124.46 0)
+			(at 151.13 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4800,7 +4788,7 @@
 			)
 		)
 		(property "Description" "test point (alternative flag-style design)"
-			(at 156.21 124.46 0)
+			(at 156.21 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
