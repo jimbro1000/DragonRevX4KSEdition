@@ -1,0 +1,30 @@
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn %FILENAME%.prj
+-ifmt mixed
+-ofn %FILENAME%
+-ofmt NGC
+-p %FAMILY%
+-top %ENTITY%
+-opt_mode %OPT_MODE%
+-opt_level %OPT_LEVEL%
+-iuc NO
+-keep_hierarchy Yes
+-netlist_hierarchy As_Optimized
+-rtlview Yes
+-hierarchy_separator /
+-bus_delimiter <>
+-case Maintain
+-verilog2001 YES
+-fsm_extract YES -fsm_encoding %FSM_ENCODING%
+-safe_implementation No
+-mux_extract Yes
+-resource_sharing YES
+-iobuf YES
+-pld_mp YES
+-pld_xp YES
+-pld_ce YES
+-wysiwyg NO
+-equivalent_register_removal YES
+-generics { %GENERICS% }

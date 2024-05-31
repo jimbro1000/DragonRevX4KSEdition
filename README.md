@@ -388,8 +388,8 @@ __Revised V table__:
 | 0111 | 1  | 1  | none (DMA) | |
 | 1000 | 1  | 12 | B - 40 | Wide Alpha |
 | 1001 | 1  | 8  | clear B1-4 | Short Alpha |
-| 1010 | 1  | 8  | B - 40 | Wide Short Alpha |
-| 1011 | 1  | 1  | B - 40 | |
+| 1010 | 1  | 1  | B - 40 | |
+| 1011 | 1  | 8  | B - 40 | Wide Short Alpha|
 | 1100 | 1  | 1  | clear B1-5 | |
 | 1101 | 1  | 1  | B - 64 | 16-bit data |
 | 1110 | 1  | 1  | B - 80 | Wide 16-bit data |

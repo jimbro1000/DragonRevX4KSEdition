@@ -10481,7 +10481,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "W65C21"
+		(property "Value" "W65C21N"
 			(at 67.3451 97.536 0)
 			(effects
 				(font
@@ -10499,7 +10499,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/436/w65c21-661.pdf"
 			(at 65.151 64.77 0)
 			(effects
 				(font
