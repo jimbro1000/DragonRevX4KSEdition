@@ -21439,6 +21439,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "S3315-ND"
+			(at 76.2 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "13"
 			(uuid "36dc85c3-a48e-4fa9-b74f-387a32cf26f6")
 		)
@@ -23310,6 +23319,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "S3315-ND"
+			(at 124.46 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "13"
 			(uuid "994b82b8-406e-4bcb-a4d8-971fd6cbe81e")
 		)
@@ -23992,6 +24010,15 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x20, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 74.93 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "S3315-ND"
 			(at 74.93 172.72 0)
 			(effects
 				(font
@@ -24936,6 +24963,15 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x20, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 125.73 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "S3315-ND"
 			(at 125.73 92.71 0)
 			(effects
 				(font

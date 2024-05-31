@@ -3752,6 +3752,10 @@
 		(uuid "080c1e29-237e-4a15-8417-165a71cd6abe")
 	)
 	(no_connect
+		(at 303.53 124.46)
+		(uuid "089cb700-5d7b-451e-8827-9ab69f58faa8")
+	)
+	(no_connect
 		(at 316.23 187.96)
 		(uuid "0ddfe478-00c1-45a4-b7e6-9e188feda537")
 	)
@@ -3846,6 +3850,10 @@
 	(no_connect
 		(at 373.38 193.04)
 		(uuid "e40b3e36-3892-44f0-811c-46a5a215d9b7")
+	)
+	(no_connect
+		(at 361.95 25.4)
+		(uuid "ec7eec4a-b76b-48d4-802a-3e682550da1f")
 	)
 	(no_connect
 		(at 316.23 137.16)
@@ -9613,6 +9621,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "EBC31DCWN-S371-ND"
+			(at 311.15 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "b23"
 			(uuid "66ae5ee9-46ab-433c-9d6e-f1997bd8c3b6")
 		)
@@ -9853,6 +9870,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 367.03 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "EBC31DCWN-S371-ND"
 			(at 367.03 162.56 0)
 			(effects
 				(font
@@ -10970,6 +10996,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "EBC31DCWN-S371-ND"
+			(at 309.88 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "b23"
 			(uuid "1d2daf37-e871-43d9-b8c5-a9ddda1cbe7d")
 		)
@@ -11613,6 +11648,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 368.3 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "EBC31DCWN-S371-ND"
 			(at 368.3 63.5 0)
 			(effects
 				(font

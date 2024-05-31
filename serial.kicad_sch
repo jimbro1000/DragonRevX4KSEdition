@@ -4375,6 +4375,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "ED90013-ND"
+			(at 229.108 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "07b1aebb-9f1c-4c55-9d17-7a2a5cdc28b0")
 		)
