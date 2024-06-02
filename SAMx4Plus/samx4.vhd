@@ -110,7 +110,7 @@ entity samx4 is
 		     Q : out std_logic;
 
 		     A : in std_logic_vector(15 downto 0);
-			 D : in std_logic_vector(7 downto 0);
+			  D : in std_logic_vector(7 downto 0);
 		     RnW : in std_logic;
 		     S : out std_logic_vector(2 downto 0);
 			 -- Z expanded for SRAM and larger address space
@@ -118,16 +118,16 @@ entity samx4 is
 		     nRAS0 : out std_logic;
 --		     nCAS : out std_logic;
 		     nWE : out std_logic;
-			 -- artifical interrupt masking for blit operations
-			 -- default behaviour is pure pass-through
-			 nNMI : out std_logic;
-			 nIRQ : out std_logic;
-			 nFIRQ : out std_logic;
-			 nNMIx : in std_logic;
-			 nIRQx : in std_logic;
-			 nFIRQx : in std_logic;
-			 -- memory size identification
-			 SZ : in std_logic_vector(2 downto 0);
+			  -- artifical interrupt masking for blit operations
+			  -- default behaviour is pure pass-through
+			  nNMI : out std_logic;
+			  nIRQ : out std_logic;
+			  nFIRQ : out std_logic;
+			  nNMIx : in std_logic;
+			  nIRQx : in std_logic;
+			  nFIRQx : in std_logic;
+			  -- memory size identification
+			  SZ : in std_logic_vector(2 downto 0);
 
 		     -- VClk being held low for 8 cycles of OscOut implies
 		     -- external reset.
@@ -153,7 +153,7 @@ architecture rtl of samx4 is
 	signal is_IO0 : boolean;
 	signal is_IO1 : boolean;
 	signal is_IO2 : boolean;
-	signal is_FF3x : boolean;
+	signal is_FFAx : boolean;
 	signal is_SAM_REG : boolean;
 	signal is_IRQ_VEC : boolean;
 
@@ -165,6 +165,9 @@ architecture rtl of samx4 is
 
 	-- RAM, including upper 32K in map type 1
 	signal is_RAM : boolean;
+	
+	-- combined E17/E18 signal to enable rom (R0+R1)
+	signal is_ROM : boolean;
 
 	-- Buffer S outputs; on the '785 these are gated with E and Q
 	signal S_i : std_logic_vector(2 downto 0);
@@ -384,13 +387,13 @@ begin
 	       "101" when is_IO1 else
 	       "110" when is_IO2 else
 	       --     the '785 special-cases writes to the IRQ vector area:
-	       "111" when want_785 and is_IRQ_VEC and RnW = '0' else
+	       -- "111" when want_785 and is_IRQ_VEC and RnW = '0' else
 	       "010" when is_IRQ_VEC else  -- select ROM1 for IRQ vectors
 	       "111" when is_FFxx else
 	       -- Upper 32K reads in map type 1:
 	       "000" when is_upper_32K and TY = '1' and RnW = '1' else
 	       -- Upper 32K writes in map type 1 on the '785:
-	       "111" when want_785 and is_upper_32K and TY = '1' and RnW = '0' else
+	       -- "111" when want_785 and is_upper_32K and TY = '1' and RnW = '0' else
 	       -- Upper 32K in map type 0 AND writes in map type 1 on the '783:
 	       "001" when is_ROM else
 		   -- ROM1 is reserved for flashing rom
@@ -401,13 +404,14 @@ begin
 	       "111";
 
 	-- ROM accesses are gated with Q and E on the '785:
-	S <= "111" when want_785 and Q_i = '1' and E_i = '0' and
-	     (S_i = "001" or S_i = "010" or S_i = "011") else S_i;
+	-- S <= "111" when want_785 and Q_i = '1' and E_i = '0' and
+	--      (S_i = "001" or S_i = "010" or S_i = "011") else S_i;
+	S <= S_i;
 
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 	-- -- Registers
 
-	process (IER, E_i, RnW, is_FFxx, is_FF3x, is_SAM_REG)
+	process (IER, E_i, RnW, is_FFxx, is_FFAx, is_SAM_REG)
 	begin
 		-- on reset low
 		if IER = '1' then
@@ -577,7 +581,7 @@ begin
 							Q_i <= '1';
 							if mpu_rate_fast and (not want_fast_video or is_RAM) then
 								-- MPU address to RAM
-								-- z_source <= MPU;
+								z_source <= MPU;
 								-- if want_refresh then
 								--	refresh_cycle <= false;
 								-- end if;
@@ -648,7 +652,7 @@ begin
 					-- CAS# rises (see above)
 
 					-- MPU address to RAM (could have done this at T7)
-					-- z_source <= MPU;
+					z_source <= MPU;
 					-- if want_refresh then
 					--	refresh_cycle <= false;
 					-- end if;
@@ -811,7 +815,8 @@ begin
 	--
 	-- nRAS is generated in the Timing section.
 
-	nRAS0 <= nRAS when refresh_cycle or RAS_bank = '0' else '1';
+	nRAS0 <= nRAS;
+	-- nRAS0 <= nRAS when refresh_cycle or RAS_bank = '0' else '1';
 
 	-- assign_nRAS1_g : if want_4K or want_16K generate
 	--	nRAS1 <= nRAS when refresh_cycle or RAS_bank = '1' else '1';
@@ -870,10 +875,12 @@ begin
 	-- SRAM logic is much simpler!
 	-- Z(21 downto 16) is current unused
 	-- will need to handle ROM addressing too though once paging is incorporated
-	Z(21 downto 16) <= '0';
+	Z(21 downto 16) <= "000000";
 	Z(15 downto 0) <=
-		A(15 downto 0) 		when z_source = MPU else
-		B(14 downto 4) & Btmp(3 downto 0);
+--		'0' & B(14 downto 4) & Btmp(3 downto 0) when z_source = VDG else
+		A(15 downto 0) 			when z_source = MPU and (S_i = "000" or S_i = "111") else
+		"00" & A(13 downto 0) 	when z_source = MPU and (S_i = "001" or S_i = "011") else 
+		'0' & B(14 downto 4) & Btmp(3 downto 0);
 
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 	-- -- Reset
@@ -1064,6 +1071,13 @@ begin
 		elsif falling_edge(clock_b5) then
 			B(15 downto 5) <= std_logic_vector(unsigned(B(15 downto 5))+1);
 		end if;
+	end process;
+	
+	process (nFIRQx, nIRQx, nNMIx)
+	begin
+		nFIRQ <= nFIRQx;
+		nIRQ <= nIRQx;
+		nNMI <= nNMIx;
 	end process;
 
 end rtl;
