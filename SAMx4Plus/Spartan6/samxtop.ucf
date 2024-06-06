@@ -1,0 +1,107 @@
+# SAMx4
+#
+# This pin configuration is for the revX4+ PCB layout.
+#
+# NOTE: you may need to enable "exhaustive fit" in ISE, depending on selected
+# configuration.
+
+## 18 Outputs
+
+# SRAM implementation only
+# Z bus expanded to 21 bits - provides 4MB address space for paging
+
+NET Z<0> LOC = P74;
+NET Z<1> LOC = P75;
+NET Z<2> LOC = P78; 
+NET Z<3> LOC = P79;
+NET Z<4> LOC = P80;
+NET Z<5> LOC = P81;
+NET Z<6> LOC = P82;
+NET Z<7> LOC = P83;
+NET Z<8> LOC = P84;
+
+NET Z<9> LOC = P85;
+NET Z<10> LOC = P87;
+NET Z<11> LOC = P88;
+NET Z<12> LOC = P92;
+NET Z<13> LOC = P93;
+NET Z<14> LOC = P94;
+NET Z<15> LOC = P95;
+NET Z<16> LOC = P97;
+NET Z<17> LOC = P98;
+NET Z<18> LOC = P99;
+NET Z<19> LOC = P100;
+NET Z<20> LOC = P101;
+NET Z<21> LOC = P102;
+
+NET S<0> LOC = P16;
+NET S<1> LOC = P17;
+NET S<2> LOC = P21;
+NET nWE LOC = P22;
+NET Q LOC = P23;
+NET E LOC = P24;
+NET nRAS0 LOC = P26;
+NET VClk LOC = P27;
+
+NET nNMI LOC = P29;
+NET nFIRQ LOC = P30;
+NET nIRQ LOC = P32;
+
+## 21 Inputs
+
+NET A<0> LOC = P137;
+NET A<1> LOC = P138;
+NET A<2> LOC = P139;
+NET A<3> LOC = P140;
+NET A<4> LOC = P141;
+NET A<5> LOC = P142;
+NET A<6> LOC = P143;
+NET A<7> LOC = P144;
+NET A<8> LOC = P111;
+NET A<9> LOC = P112;
+NET A<10> LOC = P114;
+NET A<11> LOC = P115;
+NET A<12> LOC = P116;
+NET A<13> LOC = P117;
+NET A<14> LOC = P118;
+NET A<15> LOC = P119;
+
+NET D<0> LOC = P57;
+NET D<1> LOC = P58;
+NET D<2> LOC = P59;
+NET D<3> LOC = P60;
+NET D<4> LOC = P61;
+NET D<5> LOC = P62;
+NET D<6> LOC = P64;
+NET D<7> LOC = P65;
+
+## need to identify 4 more IO pins for a DO(7..0) bus
+## for data output not just input
+
+NET DA0 LOC = P124 | BUFG = CLK;
+NET OSCOut LOC = P123 | BUFG = CLK;
+
+NET nHS LOC = P40;
+NET RnW LOC = P41;
+# Reset (AKA vclkIN) is indirect, so while this would normally be an SR pin, it doesn't make
+# sense to configure it as such:
+NET nRES LOC = P43 | BUFG = DATA_GATE;
+
+NET nNMIx LOC = P44;
+NET nIRQx LOC = P45;
+NET nFIRQx LOC = P46;
+
+# memory size identification
+NET SZ[0] LOC = P47;
+NET SZ[1] LOC = P48;
+
+## Timing constraints
+
+NET OscOut TNM_NET = OSC;
+TIMESPEC TS_OSC = PERIOD OSC 34.921 nS HIGH 50.000 %;
+
+NET A<*> TNM_NET = A;
+NET S<*> TNM_NET = S;
+NET Z<*> TNM_NET = Z;
+TIMESPEC TS_A_S = FROM A TO S 9 ns;
+TIMESPEC TS_A_Z = FROM A TO Z 14 ns;
