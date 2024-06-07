@@ -271,40 +271,40 @@ manner but does so for compatibility.
 The default address map for the SAM control
 bits is based at $FFC0
 
-| Dec   | Hex  | Purpose |
-| ----- | ---- | ------- |
+| Dec   | Hex  | Purpose  |
+| ----- | ---- | -------- |
 | 65472 | FFC0 | Clear V0 |
-| 65473 | FFC1 | Set V0 |
+| 65473 | FFC1 | Set V0   |
 | 65474 | FFC2 | Clear V1 |
-| 65475 | FFC3 | Set V1 |
+| 65475 | FFC3 | Set V1   |
 | 65476 | FFC4 | Clear V2 |
-| 65477 | FFC5 | Set V2 |
+| 65477 | FFC5 | Set V2   |
 | 65478 | FFC6 | Clear D0 |
-| 65479 | FFC7 | Set D0 |
+| 65479 | FFC7 | Set D0   |
 | 65480 | FFC8 | Clear D1 |
-| 65481 | FFC8 | Set D1 |
+| 65481 | FFC8 | Set D1   |
 | 65482 | FFCA | Clear D2 |
-| 65483 | FFCB | Set D2 |
+| 65483 | FFCB | Set D2   |
 | 65484 | FFCC | Clear D3 |
-| 65485 | FFCD | Set D3 |
+| 65485 | FFCD | Set D3   |
 | 65486 | FFCE | Clear D4 |
-| 65487 | FFCF | Set D4 |
+| 65487 | FFCF | Set D4   |
 | 65488 | FFD0 | Clear D5 |
-| 65489 | FFD1 | Set D5 |
+| 65489 | FFD1 | Set D5   |
 | 65490 | FFD2 | Clear D6 |
-| 65491 | FFD3 | Set D6 |
+| 65491 | FFD3 | Set D6   |
 | 65492 | FFD4 | Clear P1 |
-| 65493 | FFD5 | Set P1 |
+| 65493 | FFD5 | Set P1   |
 | 65494 | FFD6 | Clear R0 |
-| 65495 | FFD7 | Set R0 |
+| 65495 | FFD7 | Set R0   |
 | 65496 | FFD8 | Clear R1 |
-| 65497 | FFD9 | Set R1 |
+| 65497 | FFD9 | Set R1   |
 | 65498 | FFDA | Clear M0 |
-| 65499 | FFDB | Set M0 |
+| 65499 | FFDB | Set M0   |
 | 65500 | FFDC | Clear M1 |
-| 65501 | FFDD | Set M1 |
+| 65501 | FFDD | Set M1   |
 | 65502 | FFDE | Clear TY |
-| 65503 | FFDF | Set TY |
+| 65503 | FFDF | Set TY   |
 
 V0-2 is the Video Address Mode and controls
 how many rows are repeated and how many bits
@@ -348,13 +348,13 @@ write is acceptable behaviour.
 
 Proposed/Changed Registers:
 
-| Dec   | Hex  | Purpose |
-| ----- | ---- | ------- |
-| 65472 | FFC0 | Clear V0-3 |
+| Dec   | Hex  | Purpose               |
+| ----- | ---- | --------------------- |
+| 65472 | FFC0 | Clear V0-3            |
 | 65473 | FFC1 | Set V0-3 to bus value |
-| 65478 | FFC7 | Clear D0-7 |
+| 65478 | FFC7 | Clear D0-7            |
 | 65479 | FFC8 | Set D0-7 to bus value |
-| 65494 | FFD6 | Clear R0-1 |
+| 65494 | FFD6 | Clear R0-1            |
 | 65495 | FFD7 | Set R0-1 to bus value |
 
 __Note__:  
@@ -376,24 +376,37 @@ and 3 is quad speed of 3.57MHz (only possible
 with a HD63C09 CPU).
 
 __Revised V table__:
-| V0-3 | /X | /Y | Behaviour on HS | Notes |
-| ---- | -- | -- | --------------- | ----- |
-| 0000 | 1  | 12 | clear B1-4 | Alpha |
-| 0001 | 3  | 1  | clear B1-3 | |
-| 0010 | 1  | 3  | clear B1-4 | |
-| 0011 | 2  | 1  | clear B1-3 | |
-| 0100 | 1  | 2  | clear B1-4 | |
-| 0101 | 1  | 1  | clear B1-3 | |
-| 0110 | 1  | 1  | clear B1-4 | |
-| 0111 | 1  | 1  | none (DMA) | |
-| 1000 | 1  | 12 | B - 40 | Wide Alpha |
-| 1001 | 1  | 8  | clear B1-4 | Short Alpha |
-| 1010 | 1  | 1  | B - 40 | |
-| 1011 | 1  | 8  | B - 40 | Wide Short Alpha|
-| 1100 | 1  | 1  | clear B1-5 | |
-| 1101 | 1  | 1  | B - 64 | 16-bit data |
-| 1110 | 1  | 1  | B - 80 | Wide 16-bit data |
-| 1111 | 1  | 1  | none (DMA) | |
+| V0-3 | /X | /Y | Behaviour on HS | Notes            |
+| ---- | -- | -- | --------------- | ---------------- |
+| 0000 | 1  | 12 | clear B1-4      | Alpha            |
+| 0001 | 3  |  1 | clear B1-3      |                  |
+| 0010 | 1  |  3 | clear B1-4      |                  |
+| 0011 | 2  |  1 | clear B1-3      |                  |
+| 0100 | 1  |  2 | clear B1-4      |                  |
+| 0101 | 1  |  1 | clear B1-3      |                  |
+| 0110 | 1  |  1 | clear B1-4      |                  |
+| 0111 | 1  |  1 | none (DMA)      |                  |
+| 1000 | 1  | 12 | B - 40          | Wide Alpha       |
+| 1001 | 1  |  8 | clear B1-4      | Short Alpha      |
+| 1010 | 1  |  1 | B - 40          |                  |
+| 1011 | 1  |  8 | B - 40          | Wide Short Alpha |
+| 1100 | 1  |  1 | clear B1-5      |                  |
+| 1101 | 1  |  1 | B - 64          | 16-bit data      |
+| 1110 | 1  |  1 | B - 80          | Wide 16-bit data |
+| 1111 | 1  |  1 | none (DMA)      |                  |
+
+The additional modes enable three extra (possible)
+features:
+
+1. 40 byte screen width - (320 pixels)
+2. 8 row height text
+3. Double rate data (64 or 80 byte width)
+
+The practicality of using these modes and how
+the row reset behaves on repeated rows (12, 8,
+3 or 2). The default BASIC roms will not
+provide support for the new modes, custom code
+will be required.
 
 ### Memory Subsystem ###
 
@@ -412,6 +425,41 @@ to move the address of the cartridge to $FFB0.
 It should be safe to expand the available
 address mapping to $FF80-$FFAF providing 48
 bytes of address space.
+
+#### Paging ####
+
+Following the broad strokes of the CoCo3 paging
+schema, the $FF90 address is used to select the
+task from the available slots - 2 or 4 depending
+on the implementation.
+
+The actual paging is controlled with bytes at
+the addresses $FFA0-$FFA2.
+
+$FFA0 defines the register identifier  
+$FFA1 sets the upper byte of the page block
+$FFA2 sets the lower byte of the page block
+
+This requires two write operations to perform
+A single write to $FFA0 to select the register, 
+and a double write to $FFA1.
+
+The change to the register is not committed 
+until the end of the second write ($FFA2).
+The register id and upper byte is persistent
+between writes so it is possible to write a
+single byte to the lower byte of the page
+block, effectively making single cycle
+changes to the page.
+
+The size of the page is dependent on the
+implementation - three models are defined
+2K, 4K and 8K.
+
+The number of pages available depends on the
+installed memory. The expected default is
+4MB. With 2K pages that provides 2048 pages,
+4K provides 1024 pages, 8K gives 512 pages.
 
 #### Address Bus ####
 
