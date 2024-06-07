@@ -1,4 +1,4 @@
-23367181163770176
+23367208567240683
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -55797,6 +55797,27 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 10
 10
 Dragon
+21-0066_U20&plus_3_MXM
+
+MAX3012EUP+ 
+0
+20
+20
+Dragon
+21-0066_U20&plus_3_MXM-L
+
+MAX3012EUP+ 
+0
+20
+20
+Dragon
+21-0066_U20&plus_3_MXM-M
+
+MAX3012EUP+ 
+0
+20
+20
+Dragon
 AMD-LQFP-144
 
 
@@ -70126,13 +70147,6 @@ DFN NoLead 506AQ
 13
 9
 Package_DFN_QFN
-DFN-8-1EP_2x2mm_P0.5mm_EP0.7x1.3mm
-DFN, 8 Pin (https://www.onsemi.com/pub/Collateral/NUF4401MN-D.PDF#page=6), generated with kicad-footprint-generator ipc_noLead_generator.py
-DFN NoLead
-0
-13
-9
-Package_DFN_QFN
 DFN-8-1EP_2x2mm_P0.5mm_EP0.8x1.6mm
 DFN, 8 Pin (https://www.qorvo.com/products/d/da007268), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead
@@ -70485,13 +70499,6 @@ VDFN DFN 0.65mm
 Package_DFN_QFN
 DFN-14-1EP_3x4mm_P0.5mm_EP1.7x3.3mm
 DE Package; 14-Lead Plastic DFN (4mm x 3mm) (see Linear Technology DFN_14_05-08-1708.pdf)
-DFN 0.5
-0
-23
-15
-Package_DFN_QFN
-DFN-14-1EP_4x4mm_P0.5mm_EP2.86x3.6mm
-DFN14, 4x4, 0.5P; CASE 506CM (see ON Semiconductor 506CM.PDF)
 DFN 0.5
 0
 23
@@ -73632,13 +73639,6 @@ TI RNR0011A
 0
 20
 11
-Package_DFN_QFN
-Texas_VSON-HR-8_1.5x2mm_P0.5mm
-Texas  VSON-HR, 8 Pin (http://www.ti.com/lit/ds/symlink/tps62823.pdf#page=29), generated with kicad-footprint-generator ipc_noLead_generator.py
-Texas VSON-HR NoLead
-0
-8
-8
 Package_DFN_QFN
 Texas_WQFN-MR-100_3x3-DapStencil
 http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=szza059&fileType=pdf,http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=mpqf258&fileType=pdf,http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=LPPD235&fileType=pdf
