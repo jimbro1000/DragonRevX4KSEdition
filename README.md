@@ -199,6 +199,10 @@ schematics prior to build, and a rewrite
 of the samX4 VHDL and GAL16V8 logic that
 drives the cartridge ports
 
+See the project page for details of each
+outstanding task:
+[Dragon RevX4 Plus Project Page](https://github.com/users/jimbro1000/projects/1)
+
 ## Design Notes ##
 
 Fundamentally this board is a combination of
@@ -441,10 +445,10 @@ $FFA1 sets the upper byte of the page block
 $FFA2 sets the lower byte of the page block
 
 This requires two write operations to perform
-A single write to $FFA0 to select the register, 
+A single write to $FFA0 to select the register,
 and a double write to $FFA1.
 
-The change to the register is not committed 
+The change to the register is not committed
 until the end of the second write ($FFA2).
 The register id and upper byte is persistent
 between writes so it is possible to write a
@@ -492,3 +496,91 @@ It is the responsibility of the memory board
 to provide data on both data buses and
 control when the data is exposed on read
 operations.
+
+#### Expansion Slots ####
+
+Each expansion slot beyond the first has two signals
+as output - SZ0 and SZ1, these identify to the SAM
+how much memory is mounted on that expansion board.
+
+| SZ0 | SZ1 | Memory |
+| --- | --- | ------ |
+|  0  |  0  | 0MB    |
+|  0  |  1  | 1MB    |
+|  1  |  0  | 2MB    |
+|  1  |  1  | 4MB    |
+
+All SZ signals have pull-down resistors on the
+main board.
+
+Each slot is also exposed on the address bus at
+a fixed address offset on the Z bus. The first
+slot shares memory with the main board.
+
+| Slot | Address Hex | Address Decimal |
+| ---- | ----------- | --------------- |
+| 1    | n/a (video) |                 |
+| 2    | $400000     |  4194304        |
+| 3    | $800000     |  8388608        |
+| 4    | $C00000     | 12582912        |
+
+#### Interrupt Masking ####
+
+As a prelude to enabling a blitter operation on
+the SAM, all interrupt lines are wired through
+the SAM itself. Normally these would be fed
+directly to the CPU.
+
+The current design simply outputs these directly
+to the CPU.
+
+For the blitter operations, if the target is
+the flashrom it is essential that the CPU does
+not attempt to access the CPU vectors at the
+top of memory, or make any reads from the ROM.
+To this end the SAM has the ability to suspend
+*all* interrupts, and generate synthetic
+interrupts should the need arise.
+
+The proposed blitter operation requires the CPU
+to inform the SAM of the source and target
+addresses (within the current paging scheme),
+then go into a wait state. The SAM then performs
+the entire copy, stealing cycles from the video
+side of the clock cycle. At full pace this
+allows one or more 256 byte blocks to be written
+to the flashrom within the vertical sync period
+making the entire operation transparent. The
+SAM must issue a synthetic interrupt once the
+operation is completed.
+
+Other approaches are possible utilising the
+CPU - if a 6309 is fitted the TFM operations
+can perform the same block copy operations,
+provided the interrupts are similarly masked.
+In this situation the CPU needs only indicate
+to the SAM that masking is required and it is
+entirely up to the CPU to then notify when
+the masking is to be removed. This approach
+is significantly slower than the SAM blitter
+approach.
+
+The third approach is to utilise the built-in
+bus control signals from the CPU itself, stealing
+cycles when the CPU itself is not requesting
+bus access. This typically provides a single
+cycle per instruction but can extend to more
+depending on the addressing mode. It is however
+a slow and convuluted approach.
+
+The final approach is simply to enforce a halt
+on the CPU until the operation is completed.
+The CPU state is preserved, provided the clock
+is maintained but it is important for the SAM
+to observe the end of instruction signal to
+guarantee that the CPU is halted. In this
+approach there is no need to mask interrupts
+as the CPU will not respond while the HALT
+signal is asserted. The TSC signal could be
+used to ensure that the data and address bus
+on the CPU is in a high-impedence state
