@@ -2851,6 +2851,200 @@
 				)
 			)
 		)
+		(symbol "74xGxx:74LVC1GU04DRL"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -5.08 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "74LVC1GU04DRL"
+				(at 17.78 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-553"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74lvc1gu04.pdf"
+				(at -3.81 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single Inverter Gate, SOT-553"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "inverter cmos"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT*553*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "74LVC1GU04DRL_0_1"
+				(rectangle
+					(start -5.08 7.62)
+					(end -5.08 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -7.62) (xy 10.16 0) (xy -5.08 7.62)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center 11.43 0)
+					(radius 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "74LVC1GU04DRL_1_1"
+				(pin no_connect line
+					(at 10.16 0 180)
+					(length 5.08) hide
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 0 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "74xx:74LS02"
 			(pin_names
 				(offset 1.016)
@@ -5600,6 +5794,177 @@
 					(at 0 -2.54 90)
 					(length 2.032)
 					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:LED_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at -1.27 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "LED_Small"
+				(at -4.445 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode light-emitting-diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_Small_0_1"
+				(polyline
+					(pts
+						(xy -0.762 -1.016) (xy -0.762 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.016) (xy -0.762 0) (xy 0.762 1.016) (xy 0.762 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy -0.508 1.27) (xy -0.254 1.27) (xy -0.508 1.27) (xy -0.508 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 0 1.778) (xy 0.254 1.778) (xy 0 1.778) (xy 0 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_Small_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 1.778)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 1.778)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -19682,10 +20047,6 @@
 		(uuid "24ed1031-004a-48c5-8e80-b9ca356a6d49")
 	)
 	(no_connect
-		(at 39.37 25.4)
-		(uuid "2697c263-7a77-4d39-a3a3-10e8ebe63caf")
-	)
-	(no_connect
 		(at 154.94 158.75)
 		(uuid "30c9c270-56f7-416c-b61a-008a2afd6beb")
 	)
@@ -19694,7 +20055,7 @@
 		(uuid "35577128-fbd8-41a0-bf2a-ccad5f6428ee")
 	)
 	(no_connect
-		(at 38.6389 93.0923)
+		(at 39.37 92.71)
 		(uuid "3599ba0f-4882-405c-851a-9c2e4af6a5bb")
 	)
 	(no_connect
@@ -19710,16 +20071,12 @@
 		(uuid "42bf1412-b8b1-4003-a527-b9564ad23df9")
 	)
 	(no_connect
-		(at 120.65 82.55)
-		(uuid "4ceaa8a7-6e4e-4344-8ea2-ac540c61fda7")
-	)
-	(no_connect
 		(at 39.37 87.63)
 		(uuid "519710fd-eb91-4c0f-93bc-41586644af0f")
 	)
 	(no_connect
-		(at 120.65 85.09)
-		(uuid "58c2f282-cc5d-4e25-8090-cfad2355f44f")
+		(at 262.89 162.56)
+		(uuid "5bc9936f-2c2e-4d10-817d-fefad6c0da66")
 	)
 	(no_connect
 		(at 283.21 110.49)
@@ -19750,8 +20107,8 @@
 		(uuid "967019a6-0474-4344-968e-7113823508b7")
 	)
 	(no_connect
-		(at 120.65 87.63)
-		(uuid "96e98c2d-ad48-4b1a-b4a5-96eb173b7d04")
+		(at 201.93 82.55)
+		(uuid "99d33223-acb6-46c4-897e-d9d6c652f35c")
 	)
 	(no_connect
 		(at 382.905 25.4)
@@ -19786,8 +20143,20 @@
 		(uuid "ce65796d-8c61-468f-8cd5-82b6d6d84742")
 	)
 	(no_connect
+		(at 262.89 160.02)
+		(uuid "d0487692-477d-4e40-8f0d-dfea52864377")
+	)
+	(no_connect
+		(at 262.89 157.48)
+		(uuid "d30284ad-2b9e-42e5-947b-1cf1fb24e529")
+	)
+	(no_connect
 		(at 201.93 115.57)
 		(uuid "d4dc6d7b-43d4-4d4b-8b7b-f4362b281a3f")
+	)
+	(no_connect
+		(at 262.89 165.1)
+		(uuid "d67c8c95-c4a2-4767-9e9b-de1273813fc5")
 	)
 	(no_connect
 		(at 342.9 35.56)
@@ -19796,10 +20165,6 @@
 	(no_connect
 		(at 283.21 82.55)
 		(uuid "e084673d-9b0c-4b40-a10f-dd370f616285")
-	)
-	(no_connect
-		(at 39.37 27.94)
-		(uuid "e660415f-667a-40bb-bcbe-4f6b9ded2536")
 	)
 	(no_connect
 		(at 39.37 100.33)
@@ -19820,10 +20185,6 @@
 	(no_connect
 		(at 154.94 156.21)
 		(uuid "f2cf9875-b1fa-4e36-ab67-6835a51d33be")
-	)
-	(no_connect
-		(at 120.65 80.01)
-		(uuid "f7326049-a071-4836-b8a6-c8e4a0552f87")
 	)
 	(no_connect
 		(at 120.65 207.01)
@@ -20332,6 +20693,16 @@
 			(type default)
 		)
 		(uuid "06dd02c1-ae5b-49b9-8cd7-6348477e3dec")
+	)
+	(wire
+		(pts
+			(xy 22.86 25.4) (xy 39.37 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "077f4c1f-12c3-47e6-b40a-6f519e3ac8fa")
 	)
 	(wire
 		(pts
@@ -20855,6 +21226,16 @@
 	)
 	(wire
 		(pts
+			(xy 22.86 27.94) (xy 39.37 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "273de91c-0dfa-47ca-8371-84676adcf6e4")
+	)
+	(wire
+		(pts
 			(xy 22.86 30.48) (xy 26.035 30.48)
 		)
 		(stroke
@@ -21165,6 +21546,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 80.01) (xy 201.93 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40fe61ca-724a-4461-9347-1bccdf8de1d7")
+	)
+	(wire
+		(pts
 			(xy 198.12 102.87) (xy 201.93 102.87)
 		)
 		(stroke
@@ -21332,6 +21723,16 @@
 			(type default)
 		)
 		(uuid "4fec75d5-c764-41b9-b1b6-ccae93573dbd")
+	)
+	(wire
+		(pts
+			(xy 198.12 85.09) (xy 201.93 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52979ad2-4a84-4b3a-926e-d9d76986e011")
 	)
 	(wire
 		(pts
@@ -22842,6 +23243,16 @@
 			(type default)
 		)
 		(uuid "d8866beb-48f7-482d-ab58-9499f43d1116")
+	)
+	(wire
+		(pts
+			(xy 189.23 85.09) (xy 190.5 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8d9ae90-49c9-4ab6-b917-f2649f19ac77")
 	)
 	(bus
 		(pts
@@ -24491,17 +24902,6 @@
 		)
 		(uuid "b5539b2d-8037-4d34-b7fe-c440c3bf531d")
 	)
-	(label "Z22"
-		(at 378.46 96.52 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b67aa04d-697c-4d00-95ad-5db760adb714")
-	)
 	(label "D4"
 		(at 123.19 148.59 180)
 		(fields_autoplaced yes)
@@ -24666,17 +25066,6 @@
 			(justify right bottom)
 		)
 		(uuid "d186c082-d7b0-4eb1-8911-55541050fb7a")
-	)
-	(label "Z23"
-		(at 378.46 99.06 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d1f46107-c94d-4f5b-8f97-e44c97f486b9")
 	)
 	(label "TDI0"
 		(at 384.81 125.73 0)
@@ -24909,6 +25298,28 @@
 		)
 		(uuid "fbe2e263-4d19-4e82-948c-83f9d4d0bfee")
 	)
+	(global_label "SLOTSEL2"
+		(shape output)
+		(at 262.89 152.4 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "00add3d1-0e6c-473f-8b8f-c169d252b4f9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 275.007 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Z13"
 		(shape input)
 		(at 386.08 73.66 180)
@@ -25120,6 +25531,28 @@
 		(uuid "126916fe-7409-491b-82bb-f7b043624c6b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 191.9295 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Z22"
+		(shape output)
+		(at 22.86 25.4 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "12d6200c-5987-49dc-a251-d0e100858ffb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 16.2463 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25415,6 +25848,28 @@
 			)
 		)
 	)
+	(global_label "SLOTSEL1"
+		(shape output)
+		(at 262.89 149.86 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3dbac70e-757b-4f2d-8224-5fe8ba65bbf2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 275.007 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "S0"
 		(shape output)
 		(at 201.93 35.56 180)
@@ -25503,6 +25958,28 @@
 			)
 		)
 	)
+	(global_label "SLOT3SZ1"
+		(shape input)
+		(at 120.65 80.01 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4fcac634-1ca2-497c-bd5b-444ac425f325")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 133.0089 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Z10"
 		(shape output)
 		(at 137.16 40.64 0)
@@ -25582,6 +26059,28 @@
 		(uuid "534cb679-b743-4336-95eb-76c89cda3ee3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 16.2463 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Z22"
+		(shape input)
+		(at 237.49 147.32 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5c441953-d6f2-4818-a636-5d309c8b6e54")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 230.8763 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25723,6 +26222,28 @@
 			)
 		)
 	)
+	(global_label "SLOT2SZ1"
+		(shape input)
+		(at 120.65 85.09 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "67ec1e8e-44e1-4746-a27c-9bbb0ee81951")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 133.0089 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Z2"
 		(shape input)
 		(at 312.42 120.65 180)
@@ -25802,6 +26323,28 @@
 		(uuid "73092f45-2e90-40e8-8ac1-bfe906419cd9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 181.2086 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SLOTSEL3"
+		(shape output)
+		(at 262.89 154.94 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "742db711-da17-4226-8627-1d32d23f5d4c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 275.007 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26053,6 +26596,28 @@
 			)
 		)
 	)
+	(global_label "SLOT4SZ1"
+		(shape input)
+		(at 39.37 105.41 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a65a39de-0d9e-4a2f-83b4-cd784a0a1629")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 27.0111 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Z4"
 		(shape output)
 		(at 22.86 50.8 180)
@@ -26097,6 +26662,28 @@
 			)
 		)
 	)
+	(global_label "SLOT2SZ0"
+		(shape input)
+		(at 120.65 87.63 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a8fd8f43-d952-4651-a7ce-5d949efe2b77")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 133.0089 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "P1e"
 		(shape input)
 		(at 337.82 130.81 0)
@@ -26137,6 +26724,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SLOTSEL0"
+		(shape output)
+		(at 262.89 147.32 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "acdb7805-7607-42da-b8e3-4b7378eb9682")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 275.007 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -26405,6 +27014,28 @@
 			)
 		)
 	)
+	(global_label "Z23"
+		(shape output)
+		(at 22.86 27.94 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c773d64d-2883-4504-9c79-c4115bbd1db5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 16.2463 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "~{RAS0}"
 		(shape output)
 		(at 30.48 90.17 180)
@@ -26581,6 +27212,28 @@
 			)
 		)
 	)
+	(global_label "Z23"
+		(shape input)
+		(at 237.49 149.86 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "deaafcc0-d457-4925-a75d-117c6d7910bd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 230.8763 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "R{slash}~{W}"
 		(shape input)
 		(at 300.99 201.93 180)
@@ -26735,6 +27388,50 @@
 			)
 		)
 	)
+	(global_label "SLOT4SZ0"
+		(shape input)
+		(at 39.37 107.95 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e5dfa69c-24d3-488b-8e60-a2155e47e146")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 27.0111 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SLOT3SZ0"
+		(shape input)
+		(at 120.65 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "eb303ddc-bc9e-488c-8625-e7c9f4ffbf68")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 133.0089 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "~{WE}"
 		(shape output)
 		(at 30.48 102.87 180)
@@ -26836,6 +27533,28 @@
 		(uuid "f56047ae-dad6-4c2a-8da6-f60bdc182c6a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 381.33 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "E"
+		(shape input)
+		(at 209.55 162.56 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f69a446d-2772-4843-8f00-8790bae8d388")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 206.0768 162.4806 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27744,6 +28463,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 184.15 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "11e16594-076e-4af0-91fc-e56fc0304f3c")
+		(property "Reference" "#PWR0281"
+			(at 187.96 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 180.34 85.0899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 184.15 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f921f60-dda7-4c52-9be9-a4b2d3cd4f68")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR0281")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Motorola PIA:R_Pack_Split")
 		(at 31.115 38.1 0)
 		(mirror y)
@@ -28607,6 +29393,73 @@
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "RN2")
 					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 237.49 152.4 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2378a6d2-f3c9-4fa1-bdd4-6251ce1ad081")
+		(property "Reference" "#PWR0278"
+			(at 231.14 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 233.68 152.3999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 237.49 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 237.49 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 237.49 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "01c65f49-4d98-4b68-9b85-f105e5bd0110")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR0278")
+					(unit 1)
 				)
 			)
 		)
@@ -30234,6 +31087,83 @@
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "RN1")
 					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC1GU04DRL")
+		(at 219.71 162.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "35c062b2-d878-43d5-b458-1c7a490700a7")
+		(property "Reference" "U17"
+			(at 241.3 156.2414 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LVC1GU04DRL"
+			(at 241.3 158.7814 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-553"
+			(at 219.71 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74lvc1gu04.pdf"
+			(at 215.9 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single Inverter Gate, SOT-553"
+			(at 219.71 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f972e83e-1787-4c86-a338-28d1f9555d50")
+		)
+		(pin "3"
+			(uuid "874c28fa-f55a-46c2-a584-45ffb950e6e5")
+		)
+		(pin "4"
+			(uuid "15940f1a-6c4c-48f6-ab6c-8e033a6e61c9")
+		)
+		(pin "1"
+			(uuid "13481023-e4d9-40d2-89f2-b7b755b33f64")
+		)
+		(pin "5"
+			(uuid "a9147318-1e9a-488a-9364-7cbfa5f3254c")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "U17")
+					(unit 1)
 				)
 			)
 		)
@@ -33032,6 +33962,72 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
+		(at 250.19 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6932a1f3-fea1-4f71-a993-074418261041")
+		(property "Reference" "#PWR0268"
+			(at 250.19 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 250.19 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67215068-a662-4047-a8a9-8a733d711826")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR0268")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
 		(at 386.08 139.7 90)
 		(mirror x)
 		(unit 1)
@@ -33501,6 +34497,127 @@
 		)
 	)
 	(symbol
+		(lib_id "74xx:74LS138")
+		(at 250.19 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "70f336c1-0ae2-465c-9b86-92d343a34234")
+		(property "Reference" "IC2"
+			(at 252.3841 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "74ACT138"
+			(at 252.3841 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm"
+			(at 250.19 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74LS138"
+			(at 250.19 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "74ACT138SCXCT-ND"
+			(at 250.19 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f14e5ba0-746a-4cb6-bee3-79cc3bf7eeae")
+		)
+		(pin "10"
+			(uuid "d5b2c8d2-1fd1-4bff-b793-2c8426170e6c")
+		)
+		(pin "11"
+			(uuid "ea4354f5-2072-4e20-82c3-ab4b28b87445")
+		)
+		(pin "12"
+			(uuid "9569193a-de0a-4f5e-ae5d-8897f49c172e")
+		)
+		(pin "13"
+			(uuid "8a328574-20ff-4bb8-af34-7ef619de33b2")
+		)
+		(pin "14"
+			(uuid "2dbaa4c0-645f-48c3-89e9-d32b0b8a9a72")
+		)
+		(pin "15"
+			(uuid "ba5962b9-b0ad-4418-97ee-4866691d8904")
+		)
+		(pin "16"
+			(uuid "dd15011d-23fb-4033-87d1-995b1b09352e")
+		)
+		(pin "2"
+			(uuid "9eea5379-49bb-4446-918d-b234aff122d3")
+		)
+		(pin "3"
+			(uuid "2af15c3a-8e5d-4e61-a030-2876150ba162")
+		)
+		(pin "4"
+			(uuid "a6846ca5-7084-414d-abb6-9e8f666893e1")
+		)
+		(pin "5"
+			(uuid "b40262db-e215-4b10-bc43-fc0fe6d24cd0")
+		)
+		(pin "6"
+			(uuid "2ebca96e-673b-49a7-b01d-81bc72dd8710")
+		)
+		(pin "7"
+			(uuid "3c36c0b6-42a5-40c8-b157-971dca7be722")
+		)
+		(pin "8"
+			(uuid "d7cc2229-077e-47f4-86b6-aa52d4b6440a")
+		)
+		(pin "9"
+			(uuid "99d22410-1f29-4daa-b371-a69d58a05bd6")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "IC2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 144.78 20.32 0)
 		(unit 1)
@@ -33706,6 +34823,73 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 186.69 85.09 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "768933ec-4b99-4849-827e-621a33b69447")
+		(property "Reference" "D10"
+			(at 186.6265 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED_RED"
+			(at 186.6265 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 186.69 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 186.69 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b557d5d1-ea35-4dea-a248-59e2654c62dd")
+		)
+		(pin "2"
+			(uuid "e0682ea7-8695-48b5-ad90-43ad12dcb58d")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -34286,6 +35470,72 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "C59")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 219.71 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7faf36df-6d22-46e6-900d-5144364dfce3")
+		(property "Reference" "#PWR0279"
+			(at 219.71 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 219.71 146.685 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 219.71 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 219.71 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 219.71 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7bfc68c6-2161-4c7b-aa3e-542e6deeeacf")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR0279")
 					(unit 1)
 				)
 			)
@@ -35206,6 +36456,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 250.19 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8603b44c-3e40-48f2-b5d7-b70ea17c08b1")
+		(property "Reference" "#PWR0273"
+			(at 250.19 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 250.19 177.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0302e73b-04be-46bf-b85d-e14da48b13bf")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR0273")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 134.62 22.86 0)
 		(unit 1)
@@ -35696,7 +37012,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "MAX3012"
 			(at 111.4141 167.64 0)
 			(effects
 				(font
@@ -35724,6 +37040,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 109.22 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "MAX3012EUP+-ND"
 			(at 109.22 152.4 0)
 			(effects
 				(font
@@ -36155,7 +37480,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "MAX3012"
 			(at 52.9941 167.64 0)
 			(effects
 				(font
@@ -36183,6 +37508,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 50.8 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "MAX3012EUP+-ND"
 			(at 50.8 152.4 0)
 			(effects
 				(font
@@ -36448,6 +37782,72 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "C75")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 237.49 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a932cca4-4adf-474d-8c0b-4abcae8bb828")
+		(property "Reference" "#PWR0276"
+			(at 237.49 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 239.522 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 237.49 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 237.49 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 237.49 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4110852e-d4c5-49a1-b46e-dda5c77651dd")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR0276")
 					(unit 1)
 				)
 			)
@@ -37805,6 +39205,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 237.49 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0bdb66d-eacb-43fa-8bd9-427c64ed6034")
+		(property "Reference" "#PWR0277"
+			(at 237.49 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 237.49 169.545 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 237.49 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 237.49 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 237.49 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "55699ff2-07cc-406a-a030-6f0a1449c8c9")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR0277")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 50.8 215.9 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -38184,6 +39650,73 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "IC5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 194.31 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c59f31d1-5045-45ea-9200-822c2f8d82c0")
+		(property "Reference" "R13"
+			(at 194.31 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1K"
+			(at 194.31 87.122 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 194.31 86.868 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 194.31 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 194.31 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db76ea61-94ce-49e0-864d-c0b893bcb7d0")
+		)
+		(pin "2"
+			(uuid "49604b9f-bb7d-44b8-9c9d-212bcfc73f02")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -38607,6 +40140,72 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 219.71 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d29b23be-978c-43b6-8e71-3c4cffa5c361")
+		(property "Reference" "#PWR0280"
+			(at 219.71 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 219.71 177.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 219.71 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 219.71 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 219.71 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51a6bc03-1c39-4f0e-a934-2e2b1bd731db")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR0280")
 					(unit 1)
 				)
 			)
@@ -39514,7 +41113,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "MAX3012"
 			(at 167.2941 167.64 0)
 			(effects
 				(font
@@ -39542,6 +41141,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 165.1 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "MAX3012EUP+-ND"
 			(at 165.1 152.4 0)
 			(effects
 				(font
@@ -39681,6 +41289,73 @@
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 190.5 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "deb7da04-5ab7-42c0-ba06-cf4f3805f266")
+		(property "Reference" "#PWR0282"
+			(at 194.31 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 186.69 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 190.5 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67da0959-c7ae-4490-a496-cf6835308d32")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "#PWR0282")
 					(unit 1)
 				)
 			)
@@ -40959,7 +42634,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "MAX3012"
 			(at 52.9941 217.17 0)
 			(effects
 				(font
@@ -40987,6 +42662,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 50.8 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "MAX3012EUP+-ND"
 			(at 50.8 201.93 0)
 			(effects
 				(font
@@ -41248,6 +42932,74 @@
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
 					(reference "RN1")
 					(unit 5)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 194.31 80.01 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fa5c0e26-0e08-45f0-b8b8-ec727d23bda0")
+		(property "Reference" "R14"
+			(at 194.31 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4K7"
+			(at 194.31 77.978 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 194.31 78.232 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 194.31 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 194.31 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aeb00d71-20e1-46d5-ad7f-794f86a7e630")
+		)
+		(pin "2"
+			(uuid "cf57e9ea-7d5c-4077-976d-01c3144d7e3c")
+		)
+		(instances
+			(project "DragonRevX4Plus"
+				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2/c4b589a9-2d20-48b3-b81d-9e9e3aed36b4"
+					(reference "R14")
+					(unit 1)
 				)
 			)
 		)
