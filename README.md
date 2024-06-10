@@ -199,6 +199,10 @@ schematics prior to build, and a rewrite
 of the samX4 VHDL and GAL16V8 logic that
 drives the cartridge ports
 
+See the project page for details of each
+outstanding task:
+[Dragon RevX4 Plus Project Page](https://github.com/users/jimbro1000/projects/1)
+
 ## Design Notes ##
 
 Fundamentally this board is a combination of
@@ -271,40 +275,40 @@ manner but does so for compatibility.
 The default address map for the SAM control
 bits is based at $FFC0
 
-| Dec   | Hex  | Purpose |
-| ----- | ---- | ------- |
+| Dec   | Hex  | Purpose  |
+| ----- | ---- | -------- |
 | 65472 | FFC0 | Clear V0 |
-| 65473 | FFC1 | Set V0 |
+| 65473 | FFC1 | Set V0   |
 | 65474 | FFC2 | Clear V1 |
-| 65475 | FFC3 | Set V1 |
+| 65475 | FFC3 | Set V1   |
 | 65476 | FFC4 | Clear V2 |
-| 65477 | FFC5 | Set V2 |
+| 65477 | FFC5 | Set V2   |
 | 65478 | FFC6 | Clear D0 |
-| 65479 | FFC7 | Set D0 |
+| 65479 | FFC7 | Set D0   |
 | 65480 | FFC8 | Clear D1 |
-| 65481 | FFC8 | Set D1 |
+| 65481 | FFC8 | Set D1   |
 | 65482 | FFCA | Clear D2 |
-| 65483 | FFCB | Set D2 |
+| 65483 | FFCB | Set D2   |
 | 65484 | FFCC | Clear D3 |
-| 65485 | FFCD | Set D3 |
+| 65485 | FFCD | Set D3   |
 | 65486 | FFCE | Clear D4 |
-| 65487 | FFCF | Set D4 |
+| 65487 | FFCF | Set D4   |
 | 65488 | FFD0 | Clear D5 |
-| 65489 | FFD1 | Set D5 |
+| 65489 | FFD1 | Set D5   |
 | 65490 | FFD2 | Clear D6 |
-| 65491 | FFD3 | Set D6 |
+| 65491 | FFD3 | Set D6   |
 | 65492 | FFD4 | Clear P1 |
-| 65493 | FFD5 | Set P1 |
+| 65493 | FFD5 | Set P1   |
 | 65494 | FFD6 | Clear R0 |
-| 65495 | FFD7 | Set R0 |
+| 65495 | FFD7 | Set R0   |
 | 65496 | FFD8 | Clear R1 |
-| 65497 | FFD9 | Set R1 |
+| 65497 | FFD9 | Set R1   |
 | 65498 | FFDA | Clear M0 |
-| 65499 | FFDB | Set M0 |
+| 65499 | FFDB | Set M0   |
 | 65500 | FFDC | Clear M1 |
-| 65501 | FFDD | Set M1 |
+| 65501 | FFDD | Set M1   |
 | 65502 | FFDE | Clear TY |
-| 65503 | FFDF | Set TY |
+| 65503 | FFDF | Set TY   |
 
 V0-2 is the Video Address Mode and controls
 how many rows are repeated and how many bits
@@ -348,13 +352,13 @@ write is acceptable behaviour.
 
 Proposed/Changed Registers:
 
-| Dec   | Hex  | Purpose |
-| ----- | ---- | ------- |
-| 65472 | FFC0 | Clear V0-3 |
+| Dec   | Hex  | Purpose               |
+| ----- | ---- | --------------------- |
+| 65472 | FFC0 | Clear V0-3            |
 | 65473 | FFC1 | Set V0-3 to bus value |
-| 65478 | FFC7 | Clear D0-7 |
+| 65478 | FFC7 | Clear D0-7            |
 | 65479 | FFC8 | Set D0-7 to bus value |
-| 65494 | FFD6 | Clear R0-1 |
+| 65494 | FFD6 | Clear R0-1            |
 | 65495 | FFD7 | Set R0-1 to bus value |
 
 __Note__:  
@@ -376,24 +380,37 @@ and 3 is quad speed of 3.57MHz (only possible
 with a HD63C09 CPU).
 
 __Revised V table__:
-| V0-3 | /X | /Y | Behaviour on HS | Notes |
-| ---- | -- | -- | --------------- | ----- |
-| 0000 | 1  | 12 | clear B1-4 | Alpha |
-| 0001 | 3  | 1  | clear B1-3 | |
-| 0010 | 1  | 3  | clear B1-4 | |
-| 0011 | 2  | 1  | clear B1-3 | |
-| 0100 | 1  | 2  | clear B1-4 | |
-| 0101 | 1  | 1  | clear B1-3 | |
-| 0110 | 1  | 1  | clear B1-4 | |
-| 0111 | 1  | 1  | none (DMA) | |
-| 1000 | 1  | 12 | B - 40 | Wide Alpha |
-| 1001 | 1  | 8  | clear B1-4 | Short Alpha |
-| 1010 | 1  | 1  | B - 40 | |
-| 1011 | 1  | 8  | B - 40 | Wide Short Alpha|
-| 1100 | 1  | 1  | clear B1-5 | |
-| 1101 | 1  | 1  | B - 64 | 16-bit data |
-| 1110 | 1  | 1  | B - 80 | Wide 16-bit data |
-| 1111 | 1  | 1  | none (DMA) | |
+| V0-3 | /X | /Y | Behaviour on HS | Notes            |
+| ---- | -- | -- | --------------- | ---------------- |
+| 0000 | 1  | 12 | clear B1-4      | Alpha            |
+| 0001 | 3  |  1 | clear B1-3      |                  |
+| 0010 | 1  |  3 | clear B1-4      |                  |
+| 0011 | 2  |  1 | clear B1-3      |                  |
+| 0100 | 1  |  2 | clear B1-4      |                  |
+| 0101 | 1  |  1 | clear B1-3      |                  |
+| 0110 | 1  |  1 | clear B1-4      |                  |
+| 0111 | 1  |  1 | none (DMA)      |                  |
+| 1000 | 1  | 12 | B - 40          | Wide Alpha       |
+| 1001 | 1  |  8 | clear B1-4      | Short Alpha      |
+| 1010 | 1  |  1 | B - 40          |                  |
+| 1011 | 1  |  8 | B - 40          | Wide Short Alpha |
+| 1100 | 1  |  1 | clear B1-5      |                  |
+| 1101 | 1  |  1 | B - 64          | 16-bit data      |
+| 1110 | 1  |  1 | B - 80          | Wide 16-bit data |
+| 1111 | 1  |  1 | none (DMA)      |                  |
+
+The additional modes enable three extra (possible)
+features:
+
+1. 40 byte screen width - (320 pixels)
+2. 8 row height text
+3. Double rate data (64 or 80 byte width)
+
+The practicality of using these modes and how
+the row reset behaves on repeated rows (12, 8,
+3 or 2). The default BASIC roms will not
+provide support for the new modes, custom code
+will be required.
 
 ### Memory Subsystem ###
 
@@ -412,6 +429,41 @@ to move the address of the cartridge to $FFB0.
 It should be safe to expand the available
 address mapping to $FF80-$FFAF providing 48
 bytes of address space.
+
+#### Paging ####
+
+Following the broad strokes of the CoCo3 paging
+schema, the $FF90 address is used to select the
+task from the available slots - 2 or 4 depending
+on the implementation.
+
+The actual paging is controlled with bytes at
+the addresses $FFA0-$FFA2.
+
+$FFA0 defines the register identifier  
+$FFA1 sets the upper byte of the page block
+$FFA2 sets the lower byte of the page block
+
+This requires two write operations to perform
+A single write to $FFA0 to select the register,
+and a double write to $FFA1.
+
+The change to the register is not committed
+until the end of the second write ($FFA2).
+The register id and upper byte is persistent
+between writes so it is possible to write a
+single byte to the lower byte of the page
+block, effectively making single cycle
+changes to the page.
+
+The size of the page is dependent on the
+implementation - three models are defined
+2K, 4K and 8K.
+
+The number of pages available depends on the
+installed memory. The expected default is
+4MB. With 2K pages that provides 2048 pages,
+4K provides 1024 pages, 8K gives 512 pages.
 
 #### Address Bus ####
 
@@ -444,3 +496,91 @@ It is the responsibility of the memory board
 to provide data on both data buses and
 control when the data is exposed on read
 operations.
+
+#### Expansion Slots ####
+
+Each expansion slot beyond the first has two signals
+as output - SZ0 and SZ1, these identify to the SAM
+how much memory is mounted on that expansion board.
+
+| SZ0 | SZ1 | Memory |
+| --- | --- | ------ |
+|  0  |  0  | 0MB    |
+|  0  |  1  | 1MB    |
+|  1  |  0  | 2MB    |
+|  1  |  1  | 4MB    |
+
+All SZ signals have pull-down resistors on the
+main board.
+
+Each slot is also exposed on the address bus at
+a fixed address offset on the Z bus. The first
+slot shares memory with the main board.
+
+| Slot | Address Hex | Address Decimal |
+| ---- | ----------- | --------------- |
+| 1    | n/a (video) |                 |
+| 2    | $400000     |  4194304        |
+| 3    | $800000     |  8388608        |
+| 4    | $C00000     | 12582912        |
+
+#### Interrupt Masking ####
+
+As a prelude to enabling a blitter operation on
+the SAM, all interrupt lines are wired through
+the SAM itself. Normally these would be fed
+directly to the CPU.
+
+The current design simply outputs these directly
+to the CPU.
+
+For the blitter operations, if the target is
+the flashrom it is essential that the CPU does
+not attempt to access the CPU vectors at the
+top of memory, or make any reads from the ROM.
+To this end the SAM has the ability to suspend
+*all* interrupts, and generate synthetic
+interrupts should the need arise.
+
+The proposed blitter operation requires the CPU
+to inform the SAM of the source and target
+addresses (within the current paging scheme),
+then go into a wait state. The SAM then performs
+the entire copy, stealing cycles from the video
+side of the clock cycle. At full pace this
+allows one or more 256 byte blocks to be written
+to the flashrom within the vertical sync period
+making the entire operation transparent. The
+SAM must issue a synthetic interrupt once the
+operation is completed.
+
+Other approaches are possible utilising the
+CPU - if a 6309 is fitted the TFM operations
+can perform the same block copy operations,
+provided the interrupts are similarly masked.
+In this situation the CPU needs only indicate
+to the SAM that masking is required and it is
+entirely up to the CPU to then notify when
+the masking is to be removed. This approach
+is significantly slower than the SAM blitter
+approach.
+
+The third approach is to utilise the built-in
+bus control signals from the CPU itself, stealing
+cycles when the CPU itself is not requesting
+bus access. This typically provides a single
+cycle per instruction but can extend to more
+depending on the addressing mode. It is however
+a slow and convuluted approach.
+
+The final approach is simply to enforce a halt
+on the CPU until the operation is completed.
+The CPU state is preserved, provided the clock
+is maintained but it is important for the SAM
+to observe the end of instruction signal to
+guarantee that the CPU is halted. In this
+approach there is no need to mask interrupts
+as the CPU will not respond while the HALT
+signal is asserted. The TSC signal could be
+used to ensure that the data and address bus
+on the CPU is in a high-impedence state
