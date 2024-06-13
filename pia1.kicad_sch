@@ -5723,16 +5723,6 @@
 	)
 	(wire
 		(pts
-			(xy 267.8128 27.686) (xy 267.843 27.686)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1482af98-c181-4dfe-8d2d-1a6e563f52b4")
-	)
-	(wire
-		(pts
 			(xy 181.61 22.86) (xy 184.15 22.86)
 		)
 		(stroke
@@ -8875,7 +8865,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC2677CT-ND"
+		(property "DigiKey" "399-15473-1-ND"
 			(at 228.6 44.45 0)
 			(effects
 				(font
@@ -8952,7 +8942,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "CF14JT100RCT-ND"
+		(property "DigiKey" "RNCP0805FTD100RCT-ND"
 			(at 280.797 26.924 0)
 			(effects
 				(font
@@ -9202,7 +9192,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "CF14JT1K00CT-ND"
+		(property "DigiKey" "RNCP0805FTD1K00CT-ND"
 			(at 176.784 105.41 0)
 			(effects
 				(font
@@ -9279,7 +9269,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "CF14JT10K0CT-ND"
+		(property "DigiKey" "RNCP0805FTD10K0CT-ND"
 			(at 154.432 107.95 0)
 			(effects
 				(font
@@ -9356,7 +9346,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "CF14JT10M0CT-ND"
+		(property "DigiKey" "2019-RK73B2ATTD106JCT-ND"
 			(at 169.164 107.95 0)
 			(effects
 				(font
@@ -9790,7 +9780,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC2677CT-ND"
+		(property "DigiKey" "399-15473-1-ND"
 			(at 184.15 48.895 0)
 			(effects
 				(font
@@ -10000,7 +9990,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC1101CT-ND"
+		(property "DigiKey" "399-C0805C103K4RAC7800CT-ND"
 			(at 96.52 45.212 0)
 			(effects
 				(font
@@ -10079,7 +10069,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "CF14JT10K0CT-ND"
+		(property "DigiKey" "RNCP0805FTD10K0CT-ND"
 			(at 229.87 168.91 0)
 			(effects
 				(font
@@ -10504,7 +10494,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC2662CT-ND"
+		(property "DigiKey" "399-C0805C103K4RAC7800CT-ND"
 			(at 46.609 21.844 0)
 			(effects
 				(font
@@ -10713,7 +10703,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC2662CT-ND"
+		(property "DigiKey" "399-C0805C103K4RAC7800CT-ND"
 			(at 42.291 146.177 0)
 			(effects
 				(font
@@ -10792,7 +10782,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "CF14JT4K70CT-ND"
+		(property "DigiKey" "541-4131-1-ND"
 			(at 93.599 117.729 0)
 			(effects
 				(font
@@ -11098,7 +11088,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "CF14JT4K70CT-ND"
+		(property "DigiKey" "541-4131-1-ND"
 			(at 93.599 123.571 0)
 			(effects
 				(font
@@ -11595,6 +11585,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "296-17740-1-ND"
+			(at 162.052 139.192 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "77790a7f-84c0-4c9d-a0b7-a95cc51fd081")
 		)
@@ -11904,7 +11903,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "CF14JT10K0CT-ND"
+		(property "DigiKey" "RNCP0805FTD10K0CT-ND"
 			(at 240.03 168.91 0)
 			(effects
 				(font
@@ -12382,7 +12381,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC2677CT-ND"
+		(property "DigiKey" "399-15473-1-ND"
 			(at 243.078 47.244 0)
 			(effects
 				(font
@@ -12460,7 +12459,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC1101CT-ND"
+		(property "DigiKey" "399-C0805C103K4RAC7800CT-ND"
 			(at 87.63 45.212 0)
 			(effects
 				(font
@@ -12804,7 +12803,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC2662CT-ND"
+		(property "DigiKey" "399-C0805C103K4RAC7800CT-ND"
 			(at 276.86 31.75 0)
 			(effects
 				(font
@@ -13533,6 +13532,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "296-1112-1-ND"
+			(at 25.654 100.076 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "dfb11724-b2ea-4f74-85af-e2dbb1d99ea7")
 		)
@@ -13675,7 +13683,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC2677CT-ND"
+		(property "DigiKey" "399-15473-1-ND"
 			(at 199.39 49.53 0)
 			(effects
 				(font
@@ -13965,7 +13973,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC1101CT-ND"
+		(property "DigiKey" "399-C0805C103K4RAC7800CT-ND"
 			(at 77.47 45.212 0)
 			(effects
 				(font
@@ -14043,7 +14051,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "BC1101CT-ND"
+		(property "DigiKey" "399-C0805C103K4RAC7800CT-ND"
 			(at 106.68 45.212 0)
 			(effects
 				(font

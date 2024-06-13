@@ -3420,7 +3420,7 @@
 				)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "0.1uF"
 			(at 226.314 34.036 90)
 			(effects
 				(font
@@ -3448,6 +3448,15 @@
 		)
 		(property "Description" ""
 			(at 223.774 31.496 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 223.774 31.496 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3561,7 +3570,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.3"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
 			(at 156.718 130.556 0)
 			(effects
 				(font
@@ -3588,7 +3597,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "732-6416-1-ND"
+		(property "DigiKey" "732-8250-1-ND"
 			(at 156.718 130.556 90)
 			(effects
 				(font
@@ -3925,7 +3934,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.3"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
 			(at 156.718 122.936 0)
 			(effects
 				(font
@@ -3952,7 +3961,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "732-6416-1-ND"
+		(property "DigiKey" "732-8250-1-ND"
 			(at 156.718 122.936 90)
 			(effects
 				(font
@@ -4191,7 +4200,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.3"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
 			(at 93.218 114.046 0)
 			(effects
 				(font
@@ -4218,7 +4227,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "732-6416-1-ND"
+		(property "DigiKey" "732-8250-1-ND"
 			(at 93.218 114.046 0)
 			(effects
 				(font
@@ -4635,7 +4644,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.3"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
 			(at 147.828 114.046 0)
 			(effects
 				(font
@@ -4662,7 +4671,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" "732-6416-1-ND"
+		(property "DigiKey" "732-8250-1-ND"
 			(at 147.828 114.046 0)
 			(effects
 				(font

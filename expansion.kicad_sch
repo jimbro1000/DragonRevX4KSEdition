@@ -17229,7 +17229,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 347.9863 201.93 90)
 			(effects
 				(font
@@ -17257,6 +17257,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 347.98 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 347.98 205.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17632,7 +17641,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 389.8963 170.18 90)
 			(effects
 				(font
@@ -17660,6 +17669,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 389.89 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 389.89 173.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17700,7 +17718,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 387.3563 215.9 90)
 			(effects
 				(font
@@ -17728,6 +17746,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 387.35 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 387.35 219.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18136,6 +18163,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "399-C0805C680J5GAC7800CT-ND"
+			(at 250.19 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bffcb595-3439-4bb7-9186-1666c26dae47")
 		)
@@ -18169,7 +18205,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 217.1763 81.28 90)
 			(effects
 				(font
@@ -18197,6 +18233,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 217.17 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 217.17 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18371,7 +18416,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 389.8963 128.27 90)
 			(effects
 				(font
@@ -18399,6 +18444,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 389.89 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 389.89 132.08 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18506,7 +18560,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 287.0263 105.41 90)
 			(effects
 				(font
@@ -18534,6 +18588,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 287.02 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 287.02 109.22 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18670,6 +18733,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 148.59 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "541-4131-1-ND"
 			(at 148.59 265.43 0)
 			(effects
 				(font
@@ -18845,7 +18917,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 223.5263 21.59 90)
 			(effects
 				(font
@@ -18873,6 +18945,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 223.52 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 223.52 25.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19009,6 +19090,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 166.37 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "541-4131-1-ND"
 			(at 166.37 265.43 0)
 			(effects
 				(font
@@ -19806,7 +19896,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 289.5663 212.09 90)
 			(effects
 				(font
@@ -19834,6 +19924,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 289.56 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 289.56 215.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20194,7 +20293,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 287.0263 20.32 90)
 			(effects
 				(font
@@ -20222,6 +20321,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 287.02 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 287.02 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20262,7 +20370,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 341.6363 74.93 90)
 			(effects
 				(font
@@ -20290,6 +20398,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 341.63 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 341.63 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20426,6 +20543,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 175.26 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "541-4131-1-ND"
 			(at 175.26 265.43 0)
 			(effects
 				(font
@@ -20903,6 +21029,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "732-875575345004CT-ND"
+			(at 275.59 24.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ed86ca2f-f689-4eb7-abdc-8509088f03e6")
 		)
@@ -21231,6 +21366,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 157.48 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "541-4131-1-ND"
 			(at 157.48 265.43 0)
 			(effects
 				(font
@@ -23177,6 +23321,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "399-C0805C680J5GAC7800CT-ND"
+			(at 260.35 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c61bf277-0a6d-4f92-a729-20f680599d76")
 		)
@@ -23711,6 +23864,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "399-C0805C680J5GAC7800CT-ND"
+			(at 240.03 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3bc669ef-f6a8-4a9b-b317-2c42269221d9")
 		)
@@ -23915,7 +24077,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 215.9063 135.89 90)
 			(effects
 				(font
@@ -23943,6 +24105,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 215.9 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 215.9 139.7 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24695,7 +24866,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 386.0863 55.88 90)
 			(effects
 				(font
@@ -24723,6 +24894,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 386.08 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 386.08 59.69 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25667,6 +25847,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "541-4131-1-ND"
+			(at 193.04 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d13effc6-28c7-43ab-a52a-388b81bf27b7")
 		)
@@ -25821,7 +26010,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "0.1uF"
 			(at 288.2963 156.21 90)
 			(effects
 				(font
@@ -25849,6 +26038,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 288.29 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "399-C0805C104K4RAC7800CT-ND"
+			(at 288.29 160.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26369,6 +26567,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 184.15 265.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "541-4131-1-ND"
 			(at 184.15 265.43 0)
 			(effects
 				(font

@@ -4176,12 +4176,6 @@
 		(uuid "06286a56-6d87-4e36-89fc-7a56793f3d6f")
 	)
 	(junction
-		(at 64.77 160.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0d574b47-8544-42b6-85e5-dac03e06ea9d")
-	)
-	(junction
 		(at 66.04 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4905,6 +4899,16 @@
 		)
 		(uuid "236bb31b-bb1e-469e-9b2f-c9ce36af6366")
 	)
+	(bus
+		(pts
+			(xy 45.72 154.94) (xy 45.72 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27e66fb4-9018-449c-b474-da6f2a794f21")
+	)
 	(wire
 		(pts
 			(xy 327.66 63.5) (xy 317.5 63.5)
@@ -5217,16 +5221,6 @@
 			(type default)
 		)
 		(uuid "5a6bed59-b36e-4bb8-a1a7-0441ec481937")
-	)
-	(bus
-		(pts
-			(xy 56.769 160.02) (xy 64.77 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ad85ae7-f16a-4a84-880d-be1a532b254d")
 	)
 	(bus
 		(pts
@@ -5786,6 +5780,16 @@
 			(type default)
 		)
 		(uuid "e3d19363-eeb2-499d-8658-c58433c39d9d")
+	)
+	(bus
+		(pts
+			(xy 45.72 130.81) (xy 59.436 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7386155-52f2-4b78-9ff9-17bcd66fe1b2")
 	)
 	(bus
 		(pts
@@ -11264,6 +11268,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "541-4131-1-ND"
+			(at 261.62 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6effa0e6-8bf5-49e4-863f-34b39f77e40a")
 		)
@@ -12919,6 +12932,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "541-4131-1-ND"
+			(at 261.62 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a5d7ccb9-71e5-478c-b269-0aa47526efa0")
 		)
@@ -13447,6 +13469,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "541-4131-1-ND"
+			(at 261.62 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f687f965-2895-429c-860a-364055dfd222")
 		)
@@ -13918,6 +13949,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "541-4131-1-ND"
+			(at 157.48 24.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1cb8813c-6c9d-4fc9-9126-390ae9bb82fc")
 		)
@@ -14256,6 +14296,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "541-4131-1-ND"
+			(at 261.62 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5850d88f-a03d-41cd-b2e8-764461d4f637")
 		)
@@ -14320,6 +14369,15 @@
 		)
 		(property "Description" "Negative 1A 35V Linear Regulator, Fixed Output 5V, TO-220"
 			(at 204.47 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "TSN1-2450-ND"
+			(at 204.47 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14531,6 +14589,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "541-4131-1-ND"
+			(at 261.62 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bf53b9ed-f474-4ab2-9810-d4af715ec151")
 		)
@@ -14592,6 +14659,15 @@
 		)
 		(property "Description" "Polarized capacitor, small symbol"
 			(at 210.82 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "732-875575345004CT-ND"
+			(at 210.82 64.77 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14802,6 +14878,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "541-4131-1-ND"
+			(at 261.62 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4da5614b-5fc0-4c4d-a657-91f7f38b1a3b")
 		)
@@ -14930,6 +15015,15 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 219.71 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "541-4131-1-ND"
+			(at 219.71 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16645,6 +16739,16 @@
 			)
 			(uuid "8ab039c3-6535-4325-aa41-9a6c9de63579")
 		)
+		(pin "DC[0..7]" output
+			(at 59.436 130.81 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b4608d37-80b5-4aab-acc4-e24f7dcb3df0")
+		)
 		(instances
 			(project "DragonRevX4Plus"
 				(path "/280624a6-9139-42c2-8c41-e9b53b8715d2"
@@ -16761,16 +16865,6 @@
 				(justify left top)
 			)
 		)
-		(pin "D[0..7]" bidirectional
-			(at 56.769 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "f81be937-67ad-4cd6-bd92-795c98016d5c")
-		)
 		(pin "A[0..15]" output
 			(at 56.769 170.18 0)
 			(effects
@@ -16780,6 +16874,16 @@
 				(justify right)
 			)
 			(uuid "81116479-d244-400c-9179-aa06eee82896")
+		)
+		(pin "DC[0..7]" output
+			(at 45.72 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "d063acf9-9257-44ec-a824-9e35df07d8ec")
 		)
 		(instances
 			(project "DragonRevX4Plus"

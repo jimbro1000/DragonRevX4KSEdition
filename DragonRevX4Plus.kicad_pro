@@ -53,7 +53,6 @@
       },
       "diff_pair_dimensions": [],
       "drc_exclusions": [
-        "items_not_allowed|186512200|173659800|ee286fe6-7d3b-43bf-ac7a-9a0a89a04ca4|00000000-0000-0000-0000-000000000000",
         "lib_footprint_mismatch|208330800|207543400|343de2db-0f12-4ef6-bc0e-f8cfa4e810de|00000000-0000-0000-0000-000000000000",
         "silk_edge_clearance|230022400|251004294|8d4f041f-f210-4554-93ff-c4d307defa9d|cd9b8ce2-18c7-41cf-889b-935767478261",
         "silk_edge_clearance|230022400|255576294|8d4f041f-f210-4554-93ff-c4d307defa9d|acd7cae0-f2b0-4a43-972e-123f17234e26"
@@ -78,6 +77,7 @@
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -481,6 +481,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",

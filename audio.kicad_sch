@@ -963,6 +963,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "RNCP0805FTD1K00CT-ND"
+			(at 197.866 26.924 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c033f431-cbad-46b5-8e2a-b6df0c0bce99")
 		)
@@ -1024,6 +1033,15 @@
 		)
 		(property "Description" ""
 			(at 112.522 27.686 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "RNCP0805FTD1K00CT-ND"
+			(at 112.522 27.686 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1099,6 +1117,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "RNCP0805FTD1K00CT-ND"
+			(at 112.522 42.926 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9df9a4a5-d56e-4640-999e-c9965c0cd182")
 		)
@@ -1160,6 +1187,15 @@
 		)
 		(property "Description" ""
 			(at 197.866 42.164 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "RNCP0805FTD1K00CT-ND"
+			(at 197.866 42.164 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1301,6 +1337,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "RNCP0805FTD1K00CT-ND"
+			(at 112.522 35.306 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0f8dbeac-c2e2-43ec-a29d-22ba7657c150")
 		)
@@ -1371,6 +1416,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "RNCP0805FTD1K00CT-ND"
+			(at 122.682 48.006 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5119205a-d725-4be3-bb37-8b9abdd45eda")
 		)
@@ -1432,6 +1486,15 @@
 		)
 		(property "Description" ""
 			(at 197.866 34.544 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "RNCP0805FTD1K00CT-ND"
+			(at 197.866 34.544 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1637,6 +1700,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 208.026 47.244 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "RNCP0805FTD1K00CT-ND"
 			(at 208.026 47.244 0)
 			(effects
 				(font
